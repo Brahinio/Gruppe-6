@@ -34,8 +34,8 @@ table {
     width: 100%;
     opacity:0;
     animation-name: textop;
-    animation-delay: 2s;
-    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
 }
         

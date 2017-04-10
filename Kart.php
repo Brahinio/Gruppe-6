@@ -1,83 +1,170 @@
-<?php
-    require 'URL.php';
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Prosjekt</title>
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+    <?php
+        require 'headScript.php';
+    ?>
+    
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    
     <style>
-        #dropdowncontent{
-            display:<?php echo $menu ?>;
-            position: absolute;
-            left: 0;
-            top: 100px;
-            width: 1000px;
-            height: 300px;
-            background-color: #87CEFA;
-            margin-right: auto; 
-            margin-left: auto;
-            z-index: 1;
-            animation-name: menuanim;
-            animation-duration: 2s;
+        #clicktoshow{
+            border: none;
+            color: white;
+            padding: 10px 23px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: #555555;
         }
-        @-webkit-keyframes menuanim {
-            from {width:1000px; height:0;}
-            to {width:1000px; height:300px;}
+        #clicktohide{
+            border: none;
+            color: white;
+            padding: 10px 23px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: #555555;
         }
+        input[type=checkbox]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+            cursor:pointer;
+}
+        input[type=checkbox]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+        input[type=checkbox]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 1.2px solid black;
+  background       : rgb(224,224,224);
+  background-color : white;
+  vertical-align   : bottom;
+            
+}
+        input[type=checkbox]:not(old):checked + label > span{
+  background-color : white;
+}
+        input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '✓';
+  display     : block;
+  color       : #4d4d4d;
+  font-size   : 20px;
+  line-height : 7px;
+  text-shadow : 0 0 0.0714em #262626;
+  font-weight : 900;
+}
+        label{
+            font-size: 15px;
+            padding-left: 10px;
+            margin-bottom: 8px;
+        }
+        
+        #textbox{
+            width: 170px;
+            height: 100px;
+            text-align: center;
+            border: 3px solid #262626;
+            background-color:white;
+        }
+        
+        #textbox:focus {
+            outline:none !important;
+        }
+        
+        #submit{
+    border: none;
+    color: white;
+    padding: 10px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #555555;
+        }
+                .dataadd:focus {
+            outline:none !important;
+        }
+        
+        #type:focus{
+            outline:none !important;
+        }
+        
+                #submit:focus{
+            outline:none !important;
+        }
+        
+                #save:focus{
+            outline:none !important;
+        }
+        
+        .dataadd{
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+        #type{
+            width:150px;
+            margin-bottom:10px;
+        }
+        #save{
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #555555;
+        }
+    #type * {
+        background-color:#DCDCDC;
+        color:#555555;
+        border: 1px solid black; 
+    }
+    #description{
+        resize:none;
+    }
+    #description:focus {
+        outline:none !important;
+    }
     </style>
 </head>
 <body>
     
     <div id="wrap">
-
-        <div id="header">
-
-            <div id="dropdown">
-                
-                <a href="<?php echo $link ?>"><img src="img/navicon.png" id="icon"></a>
-                
-                 <div id="dropdowncontent">
-                    
-                     <table>
-                            
-                          <tr>
-                            <th>Mat</th>
-                            <th>Aktiviteter</th>
-                            <th>Kart</th>
-                            <th>Forslagside</th>
-                          </tr>
-                          <tr>
-                            <td><a href="https:/google.com">Fisk</a></td>
-                            <td><a href="">Fisking</a></td>
-                            <td><a href="">Fiskesteder</a></td>
-                            <td><a href="">Beste fiskesteder</a></td>
-                          </tr>
-                          <tr>
-                            <td><a href="">Hamburger</a></td>
-                            <td><a href="">Vet ikke</a></td>
-                            <td><a href="">SIden til kartet</a></td>
-                            <td><a href="">foslag</a></td>
-                          </tr>
-
-                    </table>
-                    
-                </div>
-
-            </div>
-            
-            <a href="/"><h1>Oversikt</h1></a>
-            
-        </div>
         
-        <div id="line">
-        </div>
+        <?php
+            require 'header.php'
+        ?>
 
         <div id="content">
 
             <h1>Kart</h1>
-            
+            <?php
+                require 'testkart.php';
+            ?>
 
         </div>
         

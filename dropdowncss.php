@@ -1,19 +1,13 @@
 
+
         #dropdowncontent{
-            display:<?php echo $menu ?>;
             position: absolute;
             left: 0;
             top: 100px;
             width: 1000px;
-            height: 100px;
+            height: 0;
             background-color: #87CEFA;
             margin-right: auto; 
             margin-left: auto;
             z-index: 1;
-            animation-name: menuanim;
-            animation-duration: 1s;
-        }
-        @-webkit-keyframes menuanim {
-            from {width:1000px; height:0;}
-            to {width:1000px; height:100px;}
         }

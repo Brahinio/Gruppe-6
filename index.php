@@ -1,30 +1,18 @@
-<?php
-    require 'URL.php'
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Prosjekt</title>
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-	<link rel="stylesheet" type="text/css" href="CSS/header.css">
-    <style>
-        
-        <?php
-            require 'dropdowncss.php';
-        ?>
-        
-    </style>
+    <?php
+        require 'headScript.php';
+    ?>
 </head>
 <body>
     
     <div id="wrap">
 
       <?php 
-        require 'header.php'
-        ?>
-        
-        <div id="line">
-        </div>
+        require 'header.php';
+       ?>
 
         <div id="content">
 

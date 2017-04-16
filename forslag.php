@@ -37,7 +37,16 @@
                 <input id="search-input" placeholder="Søk..." onfocus="this.placeholder = ''" 
                        onblur="this.placeholder = 'Søk...'" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
                 
-                <a id="search-clear" href="/clear.php" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only"></span></a>
+                <a id="search-clear" type="submit" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only"></span></a>
+                
+                <!-- Empty search field on clicking red cross -->
+                <script>
+                    var text = document.getElementById('search-input');
+                    var button = document.getElementById('search-clear');
+                    button.onclick = function() {
+                        text.value = '';
+                    }
+                </script>
                 
                 <div id="addSuggestionContainer">
                     
@@ -81,6 +90,7 @@
                     </script>
 -->                    
                     
+                    <!-- Jump down fields for adding suggestions -->
                     <script>
                         function showHide(idToHide) {
                             var checkCSS = document.getElementById(idToHide);

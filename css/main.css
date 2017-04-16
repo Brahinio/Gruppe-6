@@ -33,6 +33,11 @@ a, button, input, select, textarea {
     font-size: 1.1em;
 }
 
+/* Add finger-pointer to buttons */
+a, button { 
+    cursor: pointer; 
+}
+
 /* Remove blue outline */
 input:focus, button:focus, select:focus, textarea:focus {
     outline: none;
@@ -125,7 +130,7 @@ li {
         }
 
         #search #search-clear:hover {
-            color: #8f8f8f;
+            color: #e85c5c;
         }
 
         .fa-search:before {
@@ -147,6 +152,20 @@ li {
 
         #addSuggestionButton i {
             margin-right: 5px;
+            
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+        #addSuggestionButton:hover > i.fa-plus {
+            color: forestgreen;
+        }
+
+        #addSuggestionButton:hover > i.fa-minus {
+            color: #e85c5c;
         }
 
 /* Add suggestion section */  
@@ -198,7 +217,9 @@ input[name=description] {
 }
 
 #send {
-    margin-left: 74px;
+    position: relative;
+    float: right;
+    margin-right: 18px;
 }
 
         /* Sort by section */
@@ -273,12 +294,12 @@ input[name=description] {
         .votes {
             width: 90px;
             height: 70px;
-            top: 20px;
+            top: 0px;
             border: 1px solid #ccc;
         }
 
         .text {
-            top: -90px;
+            top: -95px;
             left: 130px;
             margin-right: 140px;
         }
@@ -286,6 +307,7 @@ input[name=description] {
         .text p {
             color: #777;
             /* font-size: .91em; */
+            min-height: 70px;
         }
 
 /* Footer section */

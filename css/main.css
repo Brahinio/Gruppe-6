@@ -1,5 +1,8 @@
 html {
     overflow-y: scroll;
+    
+    /* For footer bottom filling */
+    background-color: #f1f1eb;
 }
 
 body {
@@ -7,6 +10,9 @@ body {
     margin: 0 auto;
     font-family: 'Roboto Condensed', arial;
     font-weight: normal;
+    
+    /* For footer bottom filling */
+    background-color: #fff;
     
     font-size: 1em;
 }
@@ -247,7 +253,7 @@ input[name=description] {
 }
 
         /* Content section */
-        #containerBottom {
+        #mainContent {
             position: relative;
             top: -220px;
             width: 630px;

@@ -10,10 +10,11 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     
     <!-- Fonts -->
+    <!-- FJERNES NÅR VI ER ENIG OM HEADER STRUKTUR :: altså, hvor css filer, metadata og fonts legges til -->
+    <!-- SKAL VI BENYTTE SECTIONS FOR BEDRE SEMANTIKK ELLER KUN DIVS? -->
     <script src="https://use.fontawesome.com/217512596e.js"></script>
     
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
 
     <title><?php echo "Forslag"; ?></title>
 
@@ -38,7 +39,7 @@
                 
                 <a id="search-clear" href="/clear.php" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only"></span></a>
                 
-                <div section="addSuggestionContainer">
+                <div id="addSuggestionContainer">
                     
 <!--
                     <script>
@@ -84,14 +85,14 @@
                         function showHide(idToHide) {
                             var checkCSS = document.getElementById(idToHide);
                             
-                            if(checkCSS.style.visibility == 'hidden' || checkCSS.style.visibility == '') {
+                            if (checkCSS.style.visibility == 'hidden' || checkCSS.style.visibility == '') {
                                 checkCSS.style.visibility = 'visible';
                                 checkCSS.style.opacity = '1';
                                 checkCSS.style.padding = '0px 0px 220px 0px';
                                 
                                 // Replace icon
                                 var els = [].slice.apply(document.getElementsByClassName("fa fa-plus"));
-                                for(var i = 0; i < els.length; i++) {
+                                for (var i = 0; i < els.length; i++) {
                                     els[i].className = els[i].className.replace(/ *\bfa fa-plus\b/g, "fa fa-minus");
                                 }
                                 
@@ -102,7 +103,7 @@
                                 
                                 // Replace icon
                                 var els = [].slice.apply(document.getElementsByClassName("fa fa-minus"));
-                                for(var i = 0; i < els.length; i++) {
+                                for (var i = 0; i < els.length; i++) {
                                     els[i].className = els[i].className.replace(/ *\bfa fa-minus\b/g, "fa fa-plus");
                                 }
                             }
@@ -154,7 +155,7 @@
         </div>
         
         <div id="containerTopRight">
-            <div id="selectCategories">
+            <section id="selectCategories">
                 <h3>Kategorier</h3>
                 
                 <ul>
@@ -163,10 +164,10 @@
                     <li>Test3</li>
                     <li>Test4</li>
                 </ul>
-            </div>
+            </section>
         </div>
         
-        <div id="containerBottom">
+        <section id="mainContent">
             <div class="elementBlock">
                 <div class="votes"></div>
                 <div class="text">
@@ -188,7 +189,22 @@
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                 </div>
             </div>
-        </div>
+            <div class="elementBlock">
+                <div class="votes"></div>
+                <div class="text">
+                    <h3>Data Processing and Outsourced Services</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="elementBlock">
+                <div class="votes"></div>
+                <div class="text">
+                    <h3>Data Processing and Outsourced Services</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </section>
+        
     </div>
     
     <?php 

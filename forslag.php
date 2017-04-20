@@ -39,18 +39,20 @@
                 
                 <a id="search-clear" type="submit" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only"></span></a>
                 
-                <!-- Empty search field on clicking red cross -->
+                <!-- Empty search field on clicking red cross and maintain focus -->
                 <script>
                     var text = document.getElementById('search-input');
                     var button = document.getElementById('search-clear');
                     button.onclick = function() {
                         text.value = '';
+                        text.focus();
                     }
                 </script>
                 
                 <div id="addSuggestionContainer">
                     
-<!--
+<!-- Finding the best solution to hide content (kept for testing and assurement)
+
                     <script>
                         function showHide() {
                             if(document.getElementById('addSuggestion').hidden == false) {

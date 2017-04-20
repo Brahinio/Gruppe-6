@@ -1,0 +1,74 @@
+
+body {
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', arial;
+    font-weight: normal;
+    font-size: 1em;
+    
+}
+
+h1 {
+    
+    position: relative;
+    margin-left: 399px;   
+    
+}
+
+#Sort {
+   min-width: 175px; 
+   
+}
+
+#sortering {
+    
+    margin: auto;
+    margin-left: 800px; 
+}
+
+#avsnitt {
+    
+    position: relative;
+    left: 20px;
+    top: 17px;  
+}
+
+#kart {
+    
+    width: 320px;
+    height: 250px;
+    position: absolute;
+    margin-left: 610px;
+    padding: 20px;  
+    top: 127px; 
+    left: 140px; 
+    border-style: dotted; 
+    
+}
+
+
+#bilde {
+    position: relative; 
+    width: 580px;
+    height: 350px;
+    margin: 20px; 
+    
+}
+
+#twitter {
+    width: 360px; 
+    height: 250px; 
+    margin: -190px;  
+    margin-left: 610px; 
+    border-color: black; 
+    border-style: dotted;
+     
+}
+
+#veggen {
+    
+    width: 1000px;
+    height: 730px; 
+    margin: auto;
+    border-style: hidden; 
+}

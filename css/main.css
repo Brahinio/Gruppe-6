@@ -17,8 +17,15 @@ body {
     font-size: 1em;
 }
 
-p {
+p, textarea {
     font-family: 'Roboto Condensed';
+}
+
+textarea {
+    color: #000;
+    text-align: center;
+    border-radius: 15px;
+    resize: none;
 }
 
 /* Smooth transitions */
@@ -76,6 +83,115 @@ li {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+        /* Header section */
+        #containerHeader {
+            width: 100%;
+            height: 100px;
+            position: relative;
+            bottom: 0px;
+            padding-bottom: 10px;
+            margin-bottom: 50px;
+
+            background-color: #f1f1eb;
+        }
+
+        #containerHeaderContent {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .hamburger {
+            padding: 15px 15px;
+            display: inline-block;
+            cursor: pointer;
+            transition-property: opacity, filter;
+            transition-duration: .15s;
+            transition-timing-function: linear;
+            font: inherit;
+            color: inherit;
+            text-transform: none;
+            background-color: transparent;
+            border: 0;
+            margin: 0;
+            overflow: visible;
+            
+            position: relative;
+            top: -70px;
+            float: right;
+        }
+
+        .hamburger:hover {
+            opacity: 0.6; 
+        }
+
+        .hamburger-box {
+            width: 40px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .hamburger-inner {
+            display: block;
+            top: 50%;
+            margin-top: -2px; 
+        }
+
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            width: 40px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 4px;
+            position: absolute;
+            transition-property: transform;
+            transition-duration: .15s;
+            transition-timing-function: ease; 
+        }
+
+        .hamburger-inner::before, .hamburger-inner::after {
+            content: "";
+            display: block; 
+        }
+
+        .hamburger-inner::before {
+            top: -10px;
+        }
+
+        .hamburger-inner::after {
+            bottom: -10px; 
+        }
+
+        .hamburger-anim .hamburger-inner {
+            top: 2px;
+            transition-duration: .275s;
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+        }
+
+        .hamburger-anim .hamburger-inner::before {
+            top: 10px;
+            transition: opacity .125s .205s ease; 
+        }
+
+        .hamburger-anim .hamburger-inner::after {
+            top: 20px;
+            transition: transform .275s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+        }
+
+        .hamburger-anim.is-active .hamburger-inner {
+            transform: translate3d(0, 10px, 0) rotate(135deg);
+            transition-delay: .075s; 
+        }
+
+        .hamburger-anim.is-active .hamburger-inner::before {
+            transition-delay: 0s;
+            opacity: 0; 
+        }
+
+        .hamburger-anim.is-active .hamburger-inner::after {
+            transform: translate3d(0, -20px, 0) rotate(-270deg);
+            transition-delay: .075s; 
+        }
 
 #container {
     width: 900px;
@@ -141,6 +257,8 @@ li {
             content: "\f057";
         }
 
+
+
         #addSuggestionButton {
             position: relative;
             font-size: 0.9em;
@@ -149,6 +267,12 @@ li {
             background: #fff;
             border: none;
         }
+
+/*
+        #addSuggestionButton:hover {
+            background: #eee;
+        }
+*/
 
         #addSuggestionButton i {
             margin-right: 5px;
@@ -161,12 +285,71 @@ li {
         }
 
         #addSuggestionButton:hover > i.fa-plus {
-            color: forestgreen;
+            color: #228B22;
+            
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
         }
 
         #addSuggestionButton:hover > i.fa-minus {
             color: #e85c5c;
+            
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(180deg);
         }
+
+        /* PLUS-MINUS button animated */
+        /*
+        #one, #two {
+            position: absolute;
+            border-radius: 3px;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -o-transition: .15s;
+            -ms-transition: .15s;
+            -moz-transition: .15s;
+            -webkit-transition: .15s;
+            transition: .15s;
+
+            background: #228B22;
+        }
+
+        #one {
+            top: 16.5px;
+            left: 10px;
+            right: 10px;
+            height: 3px;
+        }
+
+        #two {
+            top: 10px;
+            left: 16.5px;
+            bottom: 10px;
+            width: 3px;
+        }
+
+        #icon {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background: transparent;
+            border-radius: 20px;
+        }
+
+        #icon:hover {
+            cursor: pointer;
+            background: #eee;
+        }
+
+        #icon:hover > #two {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+
+            background: #e85c5c;
+        }
+        */
 
 /* Add suggestion section */  
 #addSuggestion {
@@ -220,6 +403,7 @@ input[name=description] {
     position: relative;
     float: right;
     margin-right: 18px;
+    background-color: white;
 }
 
         /* Sort by section */

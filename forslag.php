@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    
-    <!-- Fonts -->
-    <!-- FJERNES NÅR VI ER ENIG OM HEADER STRUKTUR :: altså, hvor css filer, metadata og fonts legges til -->
-    <!-- SKAL VI BENYTTE SECTIONS FOR BEDRE SEMANTIKK ELLER KUN DIVS? -->
-    <script src="https://use.fontawesome.com/217512596e.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
-
-    <title><?php echo "Forslag"; ?></title>
-
+        <title><?php echo "Forslag"; ?></title>
 </head>
 <body>
     
     <?php 
-        require_once 'header.php';
+        require_once 'headerNew.php';
     ?>
 
     <div id="container">
         
+        <!--
         <h1 id="undertitle"><?php echo "Forslag"; ?></h1>
-        
+        -->
+
         <div id="containerTopLeft">
         
             <section id="search">
@@ -94,13 +80,20 @@
                     
                     <!-- Jump down fields for adding suggestions -->
                     <script>
-                        function showHide(idToHide) {
+                        function showHide(idToHide, iconOne, iconTwo) {
                             var checkCSS = document.getElementById(idToHide);
+                            // var plusMinus = document.getElementById(iconOne);
+                            // var plusMinusTwo = document.getElementById(iconTwo);
                             
                             if (checkCSS.style.visibility == 'hidden' || checkCSS.style.visibility == '') {
                                 checkCSS.style.visibility = 'visible';
                                 checkCSS.style.opacity = '1';
                                 checkCSS.style.padding = '0px 0px 220px 0px';
+                                
+                                // plusMinus.style.transform = 'rotate(90deg)';
+                                // plusMinus.style.background = '#e85c5c';
+                                
+                                // plusMinusTwo.style.background = '#e85c5c';
                                 
                                 // Replace icon
                                 var els = [].slice.apply(document.getElementsByClassName("fa fa-plus"));
@@ -113,6 +106,11 @@
                                 checkCSS.style.opacity = '0';
                                 checkCSS.style.padding = '0px 0px 0px 0px';
                                 
+                                // plusMinus.style.transform = 'rotate(0deg)';
+                                // plusMinus.style.background = '#228B22';
+                                
+                                // plusMinusTwo.style.background = '#228B22';
+                                
                                 // Replace icon
                                 var els = [].slice.apply(document.getElementsByClassName("fa fa-minus"));
                                 for (var i = 0; i < els.length; i++) {
@@ -122,7 +120,17 @@
                         }
                     </script>
                     
-                    <button id="addSuggestionButton" type="submit" onclick="showHide('addSuggestion')"><i class="fa fa-plus" aria-hidden="true"></i>Legg til forslag</button>
+                    <!-- PLUS-MINUS button
+                    <div id="icon">
+                      <div id="one"></div>
+                      <div id="two"></div>
+                    </div> -->
+                    
+                    <!--
+                    <button id="addSuggestionButton" type="submit" onclick="showHide('addSuggestion', 'two', 'one')">Legg til forslag</button> 
+                    -->
+                    
+                    <button id="addSuggestionButton" type="submit" onclick="showHide('addSuggestion', 'two', 'one')"><i class="fa fa-plus" aria-hidden="true"></i>Legg til forslag</button>
                     
                 </div>
             </section>
@@ -133,13 +141,9 @@
                     <input type="text" name="tittel" placeholder="Tittel" onfocus="this.placeholder = ''" 
                            onblur="this.placeholder = 'Tittel'" autocomplete="off" spellcheck="false" autocorrect="off">
                     
-                    <input type="text" name="description" placeholder="Beskrivelse..." onfocus="this.placeholder = ''" 
-                           onblur="this.placeholder = 'Beskrivelse...'" autocomplete="off" spellcheck="false" autocorrect="off">
-                    
-                    <!-- TEXTAREA BØR ERSTATTE TEXT-BESKRIVELSE!
-                         Steng også av mulighet for resize og tøm innhold ved focus.
-                    <textarea rows="5" cols="29" name="description" form="addSuggestionForm">Beskrivelse...</textarea>
-                    -->
+                    <textarea placeholder="Beskrivelse" onfocus="this.placeholder = ''" 
+                           onblur="this.placeholder = 'Beskrivelse'" rows="3" cols="29" name="description" form="addSuggestionForm"></textarea>
+                                                                                                           
 
                     <select name="categories" id="categories" required form="addSuggestionForm">
                         <option value="test1">Kategori</option>
@@ -158,10 +162,13 @@
                     <button type="submit">Topprangert</button>
                 </form>
                 
+                <!--
                 <div id="sortView">
                     <i class="fa fa-list-ul" aria-hidden="true"></i>
                     <i class="fa fa-th-large" aria-hidden="true"></i>
                 </div>
+                -->
+
             </section>
             
         </div>

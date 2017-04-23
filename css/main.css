@@ -1,20 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     overflow-y: scroll;
     
-    /* For footer bottom filling */
-    background-color: #f1f1eb;
+    /* For footer bottom filling- gets crazy when responsive */
+    /* background-color: #f1f1eb; */
 }
 
 body {
     position: relative;
     margin: 0 auto;
-    font-family: 'Roboto Condensed', arial;
+    font-family: 'Roboto Condensed', arial !important;
     font-weight: normal;
     
     /* For footer bottom filling */
     background-color: #fff;
     
     font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', arial !important;
+}
+
+h3 {
+    font-size: 1.2em !important;
+}
+
+[type=submit] {
+    -webkit-appearance: none !important;
 }
 
 p, textarea {
@@ -26,6 +42,7 @@ textarea {
     text-align: center;
     border-radius: 15px;
     resize: none;
+    width: 100%;
 }
 
 /* Smooth transitions */
@@ -51,7 +68,6 @@ input:focus, button:focus, select:focus, textarea:focus {
 }
 
 button, input, select, textarea {
-    margin-right: 10px;
     padding: 5px 15px 5px 15px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -84,25 +100,50 @@ li {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Gruppe 6 standards */
+.g6-bg {
+    background-color: #f1f1eb !important;
+}
+
+.g6-top {
+    margin-bottom: 40px !important;
+}
+
+.g6-menu, .w3-dropdown-click {
+    float: right;
+    z-index: 999;
+}
+
+.g6-cookies {
+    opacity: 0.6 !important;
+}
+
+.g6-footer {
+    height: 300px !important;
+}
+
+/* Responsive design (filler of empty containers) */
+.fill {
+    color: transparent;
+}
+
+/* Apply below screensizes */
+@media screen and (max-width: 900px) {
+    
+    /* we hide the label because at these screensizes, people know what the symbol means */
+    #menuLabel {
+        visibility: hidden;
+    }
+    
+}
+
         /* Header section */
-        #containerHeader {
-            width: 100%;
-            height: 100px;
-            position: relative;
-            bottom: 0px;
-            padding-bottom: 10px;
-            margin-bottom: 50px;
-
-            background-color: #f1f1eb;
-        }
-
-        #containerHeaderContent {
-            width: 900px;
-            margin: 0 auto;
+        #logo {
+            margin-top: 60px;
         }
 
         .hamburger {
-            padding: 15px 15px;
+            padding: 15px 0px;
             display: inline-block;
             cursor: pointer;
             transition-property: opacity, filter;
@@ -117,12 +158,15 @@ li {
             overflow: visible;
             
             position: relative;
-            top: -70px;
-            float: right;
+            top: -20px;
         }
 
         .hamburger:hover {
             opacity: 0.6; 
+        }
+
+        #menuLabel {
+            margin-top: 25px;
         }
 
         .hamburger-box {
@@ -193,38 +237,25 @@ li {
             transition-delay: .075s; 
         }
 
-#container {
-    width: 900px;
-    position: relative;
-    margin: 0 auto;
-}
-
-#undertitle {
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 100px;
-}
-
-#containerTopLeft {
-    width: 300px;
+#containerSuggestions {
+    width: 250px;
+    float: left;
+    margin-bottom: -200px;
 }
 
         /* Search section */
         #search {
             position: relative;
-            padding-top: 20px;
         }
 
         #search label {
             position: absolute;
             left: 10px;
-            top: 27px;
+            top: 6px;
         }
 
         #search-input {
-            width: 200px !important;
-            height: 23px;
-            border-radius: 15px;
+            width: 100%;
         }
 
         #search-input:focus {
@@ -233,16 +264,17 @@ li {
 
         #search #search-input, #search .hint {
             padding-left: 36px;
-            padding-right: 43px;
+            padding-right: 36px;
             border-radius: 23px;
         }
 
         #search #search-clear {
             text-decoration: none;
-            position: absolute;
-            margin-top: 9px;
-            left: 255px;
+            position: relative;
+            top: -31px;
+            left: 88%;
             color: #b3b3b3;
+            font-size: inherit;
         }
 
         #search #search-clear:hover {
@@ -257,15 +289,13 @@ li {
             content: "\f057";
         }
 
-
-
         #addSuggestionButton {
             position: relative;
             font-size: 0.9em;
             color: #666;
-            top: 5px;
             background: #fff;
             border: none;
+            left: -15px;
         }
 
 /*
@@ -295,8 +325,8 @@ li {
         #addSuggestionButton:hover > i.fa-minus {
             color: #e85c5c;
             
-            -ms-transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
         }
 
@@ -362,6 +392,7 @@ li {
     opacity: 0;
     
     position: relative;
+    top: -15px;
 }
 
 #addSuggestion * {
@@ -369,7 +400,7 @@ li {
 }
 
 #addSuggestion input {
-    width: 250px;
+    width: 100%;
     border-radius: 15px;
     text-align: center;
     margin-top: 15px;
@@ -402,18 +433,20 @@ input[name=description] {
 #send {
     position: relative;
     float: right;
-    margin-right: 18px;
+
     background-color: white;
 }
 
         /* Sort by section */
         #sortBy {
             position: relative;
-            top: -150px;
-            width: 600px;
             background-color: #fff;
-            padding-bottom: 130px;
+            padding-bottom: 70px;
         }
+
+        #sortByLabel {
+            color: #bbb;
+        }   
 
         #sortView {
             position: absolute;
@@ -427,25 +460,21 @@ input[name=description] {
             color: #666;
         }
 
-#containerTopRight {
-    width: 150px;
-    position: absolute;
-    top: 25px;
-    right: 0px;
-    margin-top: 43px;
-    padding-left: 60px;
-    border: 1px solid #ccc;
-}
+        #nyeste {
+            margin-right: 15px;
+        }
 
 #selectCategories {
-    position: relative;
-    left: -40px;
+    width: 170px;
+    right: 0px;
+    border: 1px solid #ccc;
+    float: right;
 }
 
 #selectCategories h3 {
     position: relative;
-    left: 0px;
-    top: -11px;
+    left: 10px;
+    top: -13px;
     background-color: #fff;
     margin: 0 auto;
     margin-right: 35px;
@@ -458,13 +487,6 @@ input[name=description] {
 }
 
         /* Content section */
-        #mainContent {
-            position: relative;
-            top: -220px;
-            width: 630px;
-            margin-bottom: -250px;
-        }
-
         .elementBlock * {
             position: relative;
         }
@@ -493,18 +515,3 @@ input[name=description] {
             /* font-size: .91em; */
             min-height: 70px;
         }
-
-/* Footer section */
-#containerFooter {
-    width: 100%;
-    height: 400px;
-    position: relative;
-    bottom: 0px;
-    
-    background-color: #f1f1eb;
-}
-
-#containerFooterContent {
-    width: 900px;
-    margin: 0 auto;
-}

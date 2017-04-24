@@ -17,45 +17,47 @@
 </head>
 
 <html>
-    <div class="w3-container g6-bg g6-top">
-        <div class="w3-threequarter">
-            <h3 id="logo">OVERSKRIFT - gjør header fixed og reduser størrelse ved scroll</h3>
-        </div>
+    <div class="w3-row g6-bg g6-top">
+        <div class="w3-container w3-content">
+            <div class="w3-threequarter">
+                <h3 id="logo">OVERSKRIFT - gjør header fixed og reduser størrelse ved scroll</h3>
+            </div>
 
-        <div class="w3-quarter">
-            <script>
-                // Menu onclick
-                function showHideMenu() {
-                    var dropDown = document.querySelector(".hamburger");
+            <div class="w3-quarter">
+                <script>
+                    // Menu onclick
+                    function showHideMenu() {
+                        var dropDown = document.querySelector(".hamburger");
 
-                    if(dropDown.classList.contains("is-active")) {
-                        dropDown.classList.remove("is-active");
+                        if(dropDown.classList.contains("is-active")) {
+                            dropDown.classList.remove("is-active");
 
-                    } else {
-                        dropDown.classList.add("is-active");
-                    }
-                    
-                    // Drop down
-                    var x = document.getElementById("menuMain");
-                    
-                    if (x.className.indexOf("w3-show") == -1) 
-                        x.className += " w3-show";
-                    else 
-                        x.className = x.className.replace(" w3-show", "");
-                 }
-            </script>
-            
-            <div class="w3-dropdown-click">
-                <button onclick="showHideMenu()" class="w3-button hamburger hamburger-anim">
-                    <h3 id="menuLabel">MENY</h3>
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-                <div id="menuMain" class="g6-menu w3-dropdown-content w3-bar-block w3-border">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                        } else {
+                            dropDown.classList.add("is-active");
+                        }
+
+                        // Drop down
+                        var x = document.getElementById("menuMain");
+
+                        if (x.className.indexOf("w3-show") == -1) 
+                            x.className += " w3-show";
+                        else 
+                            x.className = x.className.replace(" w3-show", "");
+                     }
+                </script>
+
+                <div class="w3-dropdown-click">
+                    <button onclick="showHideMenu()" class="w3-button hamburger hamburger-anim">
+                        <h3 id="menuLabel">MENY</h3>
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <div id="menuMain" class="g6-menu w3-dropdown-content w3-bar-block w3-border">
+                        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                    </div>
                 </div>
             </div>
         </div>

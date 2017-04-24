@@ -17,13 +17,24 @@
 </head>
 
 <html>
-    <div class="w3-row g6-bg g6-top">
+    <div class="w3-row g6-bg g6-top g6-shadow">
         <div class="w3-container w3-content">
             <div class="w3-threequarter">
-                <h3 id="logo">OVERSKRIFT - gjør header fixed og reduser størrelse ved scroll</h3>
+                <div class="w3-half">
+                    <a href="./" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
+                </div>
+                
+                <!-- Icon menu -->
+                <div class="w3-light-grey">
+                  <a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-home"></i></a>
+                  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+                  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+                  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+                </div>
             </div>
 
             <div class="w3-quarter">
+                
                 <script>
                     // Menu onclick
                     function showHideMenu() {
@@ -53,9 +64,9 @@
                             <span class="hamburger-inner"></span>
                         </span>
                     </button>
-                    <div id="menuMain" class="g6-menu w3-dropdown-content w3-bar-block w3-border">
+                    <div id="menuMain" class="g6-menu g6-bg g6-float w3-dropdown-content w3-bar-block g6-shadow-2">
                         <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 2 test test</a>
                         <a href="#" class="w3-bar-item w3-button">Link 3</a>
                     </div>
                 </div>

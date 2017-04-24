@@ -138,7 +138,6 @@
                             <textarea placeholder="Beskrivelse" onfocus="this.placeholder = ''" 
                                    onblur="this.placeholder = 'Beskrivelse'" rows="3" name="description" form="addSuggestionForm"></textarea>
 
-
                             <select name="categories" id="categories" required form="addSuggestionForm">
                                 <option value="test1">Kategori</option>
                                 <option value="test2">Test2</option>
@@ -153,20 +152,8 @@
                 </div>
             </div>
 
-            <div class="w3-container w3-half">
-                <section id="selectCategories">
-                    <h3>Kategorier</h3>
-
-                    <ul>
-                        <li>Test</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                    </ul>
-                </section>
-            </div>
-
-            <div class="w3-container">
+            <!-- Start of general content -->
+            <div class="w3-container w3-threequarter">
                 <section id="sortBy">
                     <p id="sortByLabel">sorter etter</p>
                     <form action="/sortBy.php">
@@ -182,42 +169,63 @@
                     -->
                 </section>
 
-                <div class="elementBlock">
-                    <div class="votes"></div>
-                    <div class="text">
+                <div class="contentBlock w3-row w3-border-bottom">
+                    <div class="votes w3-col w3-hide-small"></div>
+                    <div class="text w3-rest">
                         <h3>Information Technology - Semiconductor Equipment</h3>
                         <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
-                <div class="elementBlock">
-                    <div class="votes"></div>
-                    <div class="text">
+                
+                <div class="contentBlock w3-row w3-border-bottom">
+                    <div class="votes w3-col w3-hide-small"></div>
+                    <div class="text w3-rest">
                         <h3>Consumer Discretionary</h3>
-                        <p>MINDRE TEKST- MER BILDER? VIS ARTIKLER I BLOKKER (slik vist i forelesning / westerdals.no)? HEADER BØR OPPFØRE SEG SOM westerdals sin? Bedre med kategorier i drop-down? Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
+                        <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet.</p>
                     </div>
                 </div>
-                <div class="elementBlock">
-                    <div class="votes"></div>
-                    <div class="text">
+                
+                <div class="contentBlock w3-row w3-border-bottom">
+                    <div class="votes w3-col w3-hide-small"></div>
+                    <div class="text w3-rest">
                         <h3>Data Processing and Outsourced Services</h3>
                         <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
-                <div class="elementBlock">
-                    <div class="votes"></div>
-                    <div class="text">
+                
+                <div class="contentBlock w3-row w3-border-bottom">
+                    <div class="votes w3-col w3-hide-small"></div>
+                    <div class="text w3-rest">
                         <h3>Data Processing and Outsourced Services</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis.</p>
                     </div>
                 </div>
-                <div class="elementBlock">
-                    <div class="votes"></div>
-                    <div class="text">
+                
+                <div class="contentBlock w3-row w3-border-bottom">
+                    <div class="votes w3-col w3-hide-small"></div>
+                    <div class="text w3-rest">
                         <h3>Data Processing and Outsourced Services</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.
+                        <br><br>
+                        Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
+                
             </div>
+            
+            <div class="w3-container w3-quarter w3-hide-small">
+                <section class="selectCategories">
+                    <h3>Kategorier</h3>
+
+                    <ul>
+                        <li>Test</li>
+                        <li>Test2</li>
+                        <li>Test3</li>
+                        <li>Test4</li>
+                    </ul>
+                </section>
+            </div>
+            
         </div>
     </div>
     

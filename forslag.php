@@ -154,7 +154,8 @@
 
             <!-- Start of general content -->
             <div class="w3-container w3-threequarter">
-                <section id="sortBy">
+                
+                <section class="sortBy">
                     <p id="sortByLabel">sorter etter</p>
                     <form action="/sortBy.php">
                         <button id="nyeste" type="submit">Nyeste</button>
@@ -169,7 +170,7 @@
                     -->
                 </section>
 
-                <div class="contentBlock w3-row w3-border-bottom">
+                <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
                         <h3>Information Technology - Semiconductor Equipment</h3>
@@ -177,7 +178,7 @@
                     </div>
                 </div>
                 
-                <div class="contentBlock w3-row w3-border-bottom">
+                <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
                         <h3>Consumer Discretionary</h3>
@@ -185,7 +186,7 @@
                     </div>
                 </div>
                 
-                <div class="contentBlock w3-row w3-border-bottom">
+                <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
                         <h3>Data Processing and Outsourced Services</h3>
@@ -193,7 +194,7 @@
                     </div>
                 </div>
                 
-                <div class="contentBlock w3-row w3-border-bottom">
+                <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
                         <h3>Data Processing and Outsourced Services</h3>
@@ -201,7 +202,7 @@
                     </div>
                 </div>
                 
-                <div class="contentBlock w3-row w3-border-bottom">
+                <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
                         <h3>Data Processing and Outsourced Services</h3>
@@ -216,7 +217,6 @@
             <div class="w3-container w3-quarter w3-hide-small">
                 <section class="selectCategories">
                     <h3>Kategorier</h3>
-
                     <ul>
                         <li>Test</li>
                         <li>Test2</li>

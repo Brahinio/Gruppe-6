@@ -17,11 +17,11 @@
 </head>
 
 <html>
-    <div class="w3-row g6-bg g6-top g6-shadow">
-        <div class="w3-container w3-content">
+    <div class="w3-row g6-bg g6-top g6-zindex-top g6-shadow">
+        <div class="w3-container w3-content g6-zindex-top">
             <div class="w3-threequarter">
                 <div class="w3-half">
-                    <a href="./" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
+                    <a href="./indexNew.php" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
                 </div>
                 
                 <!-- Icon menu -->
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="w3-quarter">
+            <div class="w3-quarter g6-zindex-top">
                 
                 <script>
                     // Menu onclick
@@ -64,10 +64,10 @@
                             <span class="hamburger-inner"></span>
                         </span>
                     </button>
-                    <div id="menuMain" class="g6-menu g6-bg g6-float w3-dropdown-content w3-bar-block g6-shadow-2">
-                        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                        <a href="#" class="w3-bar-item w3-button">Link 2 test test</a>
-                        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                    <div id="menuMain" class="g6-menu g6-bg g6-shadow-2 w3-dropdown-content w3-bar-block">
+                        <a href="/forslag.php" class="g6-menu-style w3-bar-item w3-button">Forslag</a>
+                        <a href="#" class="g6-menu-style w3-bar-item w3-button">Link 2 test test</a>
+                        <a href="#" class="g6-menu-style w3-bar-item w3-button">Link 3</a>
                     </div>
                 </div>
             </div>

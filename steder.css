@@ -1,22 +1,22 @@
 
 body {
-    position: relative;
+    
     margin: 0 auto;
     font-family: 'Roboto Condensed', arial;
     font-weight: normal;
     font-size: 1em;
-    
+    position: relative;     
 }
 
 h1 {
     
-    position: relative;
     margin-left: 399px;   
-    
+
 }
 
 #Sort {
-   min-width: 175px; 
+   
+    min-width: 175px; 
    
 }
 
@@ -28,47 +28,49 @@ h1 {
 
 #avsnitt {
     
+    left: 50px;
     position: relative;
-    left: 20px;
-    top: 17px;  
+    
 }
 
 #kart {
     
-    width: 320px;
-    height: 250px;
-    position: absolute;
-    margin-left: 610px;
-    padding: 20px;  
-    top: 127px; 
-    left: 140px; 
+    width: 370px;
+    height: 320px;
+    margin-left: -20px; 
+    top: -60px;
+    left: 0px;
     border-style: dotted; 
-    
-}
+    position: relative;
 
+}
 
 #bilde {
-    position: relative; 
-    width: 580px;
-    height: 350px;
-    margin: 20px; 
+    
+    width: 540px;
+    height: 390px;
+    margin: 38px;
     
 }
-
+   
 #twitter {
-    width: 360px; 
+    
+    width: 370px; 
     height: 250px; 
-    margin: -190px;  
-    margin-left: 610px; 
-    border-color: black; 
+    margin: -240px;  
+    margin-left: 600px;
+    border-color: black;
     border-style: dotted;
-     
+    position: absolute;       
 }
 
 #veggen {
     
     width: 1000px;
-    height: 730px; 
-    margin: auto;
-    border-style: hidden; 
+    height: 800px; 
+    margin: auto; 
+    border-style: hidden;
+    overflow: hidden; 
 }
+
+

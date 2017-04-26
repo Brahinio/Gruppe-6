@@ -1,6 +1,5 @@
 
 body {
-    
     margin: 0 auto;
     font-family: 'Roboto Condensed', arial;
     font-weight: normal;
@@ -38,8 +37,8 @@ h1 {
     width: 370px;
     height: 320px;
     margin-left: -20px; 
-    top: -60px;
-    left: 0px;
+    top: -63px;
+    left: -3px;
     border-style: dotted; 
     position: relative;
 
@@ -49,7 +48,7 @@ h1 {
     
     width: 540px;
     height: 390px;
-    margin: 38px;
+    margin: 40px;
     
 }
    
@@ -65,7 +64,6 @@ h1 {
 }
 
 #veggen {
-    
     width: 1000px;
     height: 800px; 
     margin: auto; 

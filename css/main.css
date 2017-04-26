@@ -168,14 +168,19 @@ li {
     box-shadow: 0 1px 1px rgba(0,0,0,0.2) !important;
 }
 
+.g6-border-top {
+    border-top: 1px solid #e8e8e8 !important;
+}
+
 .g6-border-bottom {
     border-bottom: 1px solid #e8e8e8 !important;
 }
 
 .g6-cookies {
-    opacity: 0.5 !important;
+    opacity: 0.6 !important;
     background-color: #eee !important;
     margin-top: 40px;
+    font-size: 0.9em;
 }
 
 .g6-no-header-space {
@@ -186,22 +191,27 @@ li {
     padding: 1px 16px !important;
 }
 
-.g6-margin {
-    margin-bottom: 60px;
-}
-
-.g6-margin-top {
-    margin-top: 60px;
+.g6-padding-both {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
 }
 
 .g6-content-padding {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.g6-margin {
+    margin-bottom: 60px !important;
+}
+
+.g6-margin-top {
+    margin-top: 60px !important;
 }
 
 .g6-center {
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
 
 .g6-footer {
@@ -214,7 +224,7 @@ li {
 
 /* Responsive design (filler of empty containers) */
 .g6-fill {
-    color: transparent;
+    color: transparent !important;
 }
 
 /* Apply below screensizes */
@@ -419,6 +429,19 @@ li {
 
 .home-mast__container > *:nth-child(4):after { 
     background-color: #e6661f;
+}
+
+/* Instagram / YouTube feed */
+.juicer-feed.loaded {
+    border: 1px solid #efefef;
+}
+
+.juicer-feed h1.referral a {
+    display: none !important;
+}
+
+.juicer-feed.white li.feed-item.juicer, .juicer-feed.user li.feed-item.juicer, .juicer-feed.juicer-widget li.feed-item.juicer, .juicer-feed.colors li.feed-item.juicer, .juicer-feed.gray li.feed-item.juicer, .juicer-feed.modern li.feed-item.juicer, .juicer-feed.polaroid li.feed-item.juicer {
+    display: none !important;
 }
 
 /****************************************************/

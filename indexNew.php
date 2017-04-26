@@ -47,26 +47,37 @@
 
             <section class="infoboxes w3-row g6-center g6-margin g6-border-bottom">
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-4">boks</h4>
+                    <h4 class="w3-card-4">ikon/knapp</h4>
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
                 </div>
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-4">boks</h4>
+                    <h4 class="w3-card-4">ikon/knapp</h4>
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
                 </div>
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-4">boks</h4>
+                    <h4 class="w3-card-4">ikon/knapp</h4>
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
                 </div>
             </section>
 
-            <section class="twitter-feed w3-row g6-margin-top">
-                <div class="w3-half">
-                    <p>BILDER HER?</p>
+            <section class="feeds w3-row g6-margin-top">
+                <div class="w3-row g6-margin">
+                    <div class="w3-half g6-content-padding">
+                        <p>Hent ut bilder med gitt hash tags (så studenter kan legge opp bilder fra det de gjør?)?
+                        <br>- kategorier burde ikke påvirkes av drop-down
+                        <br>- legg på farger- gjør header penere!
+                        <br>- slideren egner seg dårlig til touch</p>
+                    </div>
+                    <div class="twitterFeed w3-half w3-card-2 g6-center g6-content-padding">
+                        <a class="twitter-timeline" data-height="400" data-width="400" href="https://twitter.com/westerdalsact">Tweets fra Westerdals ACT</a> 
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </div>
-                <div class="w3-half w3-card-2 g6-center">
-                    <a class="twitter-timeline" data-height="400" data-width="400" href="https://twitter.com/westerdalsact">Tweets fra Westerdals ACT</a> 
-                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div class="w3-row g6-border-top">
+                    <h3 class="g6-center g6-padding-both">#westerdals</h3>
+                    <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
+                    <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+                    <ul class="juicer-feed" data-feed-id="westerdals"></ul>
                 </div>
             </section>
             

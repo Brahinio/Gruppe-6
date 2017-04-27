@@ -22,7 +22,7 @@
             <div class="w3-row g6-zindex-top">
                 <div class="g6-threequarter-top">
                     <div class="w3-half">
-                        <a href="./index.php" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
+                        <a href="./" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
                     </div>
 
                     <!-- Icon menu -->
@@ -68,9 +68,10 @@
                             </span>
                         </button>
                         <div id="menuMain" class="g6-menu g6-bg g6-shadow-2 w3-dropdown-content w3-bar-block">
-                            <a href="/forslag.php" class="g6-menu-style w3-bar-item w3-button">Forslag</a>
-                            <a href="#" class="g6-menu-style w3-bar-item w3-button">Link 2 test test</a>
-                            <a href="#" class="g6-menu-style w3-bar-item w3-button">Link 3</a>
+                            <a href="./" class="g6-menu-style w3-bar-item w3-button">Hjem</a>
+                            <a href="./steder.php" class="g6-menu-style w3-bar-item w3-button">Steder</a>
+                            <a href="./kart.php" class="g6-menu-style w3-bar-item w3-button">Kart</a>
+                            <a href="./forslag.php" class="g6-menu-style w3-bar-item w3-button">Forslag</a>
                         </div>
                     </div>
                 </div>

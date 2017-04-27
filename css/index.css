@@ -1,0 +1,84 @@
+/****************************************************/
+/****************************************************/
+/**/
+/**/
+/*                  index / forside css             */
+/**/
+/**/
+/****************************************************/
+/****************************************************/
+
+/* OLD SLIDER
+.absolute-bg { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 0; 
+    height: 100%; 
+    width: 100%; 
+    background-position: 50%; 
+    background-repeat: no-repeat; 
+    background-size: cover; overflow: hidden; 
+} 
+
+.home-mast { 
+    height: 100vh; 
+} 
+
+.home-mast__container { 
+    display: flex; 
+    height: 100%; 
+} 
+
+.home-mast__container > * { 
+    position: relative; 
+    flex-grow: 1; 
+    transition: flex-grow 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s; 
+} 
+
+.home-mast__container > *:hover { 
+    flex-grow: 3; 
+} 
+
+.home-mast__container > *:after { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    z-index: 0;
+    height: 100%; 
+    width: 100%; 
+    background-color: #00a19b; 
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out; 
+} 
+
+.home-mast__container > *:hover:after { 
+    opacity: 0.3; 
+    transition-delay: 0.6s; 
+} 
+
+.home-mast__container > *:nth-child(2):after { 
+    background-color: #bb1654; 
+} 
+
+.home-mast__container > *:nth-child(3):after { 
+    background-color: #006ba6;
+} 
+
+.home-mast__container > *:nth-child(4):after { 
+    background-color: #e6661f;
+}
+*/
+
+/* Instagram / YouTube feed */
+.juicer-feed.loaded {
+    border: 1px solid #efefef;
+}
+
+.juicer-feed h1.referral a {
+    display: none !important;
+}
+
+.juicer-feed.white li.feed-item.juicer, .juicer-feed.user li.feed-item.juicer, .juicer-feed.juicer-widget li.feed-item.juicer, .juicer-feed.colors li.feed-item.juicer, .juicer-feed.gray li.feed-item.juicer, .juicer-feed.modern li.feed-item.juicer, .juicer-feed.polaroid li.feed-item.juicer {
+    display: none !important;
+}

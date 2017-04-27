@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
 <head>
-        <title><?php echo "Forslag"; ?></title>
+    <link rel="stylesheet" type="text/css" href="css/forslag.css">
+    <title>Forslag</title>
 </head>
 <body>
     
     <?php 
-        require_once 'headerNew.php';
+        require_once 'header.php';
     ?>
     
     <div class="w3-row">
-        <div class="w3-content">
-            <div class="w3-container w3-half">
-
+        <div class="w3-content g6-padding">
+            
+            <div class="w3-threequarter">
                 <div id="containerSuggestions">
                     <section id="search">
                         <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only"></span></label>
@@ -151,10 +150,26 @@
 
                 </div>
             </div>
+            
+            <div class="w3-quarter w3-hide-small g6-float-right">
+                <section class="selectCategories g6-float-right">
+                    <h3>Kategorier</h3>
+                    <ul>
+                        <li>Test</li>
+                        <li>Test2</li>
+                        <li>Test3</li>
+                        <li>Test4</li>
+                        <li>Test</li>
+                        <li>Test2</li>
+                        <li>Test3</li>
+                        <li>Test4</li>
+                    </ul>
+                </section>
+            </div>
 
             <!-- Start of general content -->
-            <div class="w3-container w3-threequarter">
-                
+            <div class="w3-threequarter">
+
                 <section class="sortBy">
                     <p id="sortByLabel">sorter etter</p>
                     <form action="/sortBy.php">
@@ -177,7 +192,7 @@
                         <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
-                
+
                 <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
@@ -185,7 +200,7 @@
                         <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet.</p>
                     </div>
                 </div>
-                
+
                 <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
@@ -193,7 +208,7 @@
                         <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
-                
+
                 <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
@@ -201,7 +216,7 @@
                         <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis.</p>
                     </div>
                 </div>
-                
+
                 <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
@@ -211,19 +226,7 @@
                         Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
-                
-            </div>
-            
-            <div class="w3-container w3-quarter w3-hide-small">
-                <section class="selectCategories">
-                    <h3>Kategorier</h3>
-                    <ul>
-                        <li>Test</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                    </ul>
-                </section>
+
             </div>
             
         </div>
@@ -234,4 +237,3 @@
     ?>
 
 </body>
-</html>

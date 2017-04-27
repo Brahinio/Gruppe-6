@@ -238,6 +238,11 @@ li {
     .votes {
         margin-right: 30px !important;
     }
+    
+    g6-threequarter-top, g6-quarter-top {
+    float: left;
+    width: 50%;
+    }
 }
 
 /****************************************************/
@@ -253,6 +258,16 @@ li {
         /* Header section */
         #logo {
             margin-top: 40px;
+        }
+
+        .g6-quarter-top {
+            width: 24.99999%;
+            float: left;
+        }
+
+        .g6-threequarter-top {
+            width: 74.99999%;
+            float: left;
         }
 
         .g6-top {

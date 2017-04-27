@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
 <head>
-
-        <title><?php echo "Forside"; ?></title>
+    <title><?php echo "Forside"; ?></title>
 </head>
 <body>
     
     <?php 
-        require_once 'headerNew.php';
+        require_once 'header.php';
     ?>
     
     <div class="w3-row">
@@ -61,4 +58,3 @@
     ?>
 
 </body>
-</html>

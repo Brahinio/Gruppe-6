@@ -20,7 +20,7 @@
     <div class="w3-row g6-bg g6-top g6-zindex-top g6-shadow">
         <div class="w3-content g6-full-width g6-zindex-top g6-padding">
             <div class="w3-row g6-zindex-top">
-                <div class="w3-threequarter">
+                <div class="g6-threequarter-top">
                     <div class="w3-half">
                         <a href="./index.php" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
                     </div>
@@ -36,7 +36,7 @@
                     -->
                 </div>
 
-                <div class="w3-quarter g6-zindex-top">
+                <div class="g6-quarter-top g6-zindex-top">
 
                     <script>
                         // Menu onclick

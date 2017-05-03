@@ -1,3 +1,49 @@
+<?php
+
+// Koble til databasen
+require __DIR__ . '/setup.php';
+
+$maxPerPage = 10;
+
+// Hent kategori id fra url
+if (isset($_GET['category'])) {
+    $categoryId = $_GET['category'];
+}
+
+if (isset($categoryId) && $categoryId != 0) {
+    $chosenCategory = Category::find($categoryId);
+    
+    if(isset($_GET['sort'])) {
+        if($_GET['sort'] == 0) {
+            $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('date_added')->take($maxPerPage);
+        }
+        else {
+            $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('num_of_votes')->take($maxPerPage);
+        }
+    }
+    else {
+        $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('num_of_votes')->take($maxPerPage);
+    }
+}
+else {
+    if(isset($_GET['sort'])) {
+        if($_GET['sort'] == 0) {
+            $suggestions = Suggestion::all()->sortByDesc('date_added')->take($maxPerPage);
+        }
+        else {
+            $suggestions = Suggestion::all()->sortByDesc('num_of_votes')->take($maxPerPage);
+        }
+    }
+    else {
+        $suggestions = Suggestion::all()->sortByDesc('num_of_votes')->take($maxPerPage);
+    }
+}
+
+// Hent alle kategorier
+$categories = Category::all();
+
+?>
+
 <head>
     <link rel="stylesheet" type="text/css" href="css/forslag.css">
     <title>Forslag</title>
@@ -129,19 +175,16 @@
                     </section>
 
                     <section id="addSuggestion">
-                        <form action="/addSuggestion.php" method="post" id="addSuggestionForm">
+                        <form action="./add_suggestion.php" method="post" id="addSuggestionForm">
 
-                            <input type="text" name="tittel" placeholder="Tittel" onfocus="this.placeholder = ''" 
-                                   onblur="this.placeholder = 'Tittel'" autocomplete="off" spellcheck="false" autocorrect="off">
+                            <input type="text" name="title" placeholder="Tittel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tittel'" autocomplete="off" spellcheck="false" autocorrect="off" required>
 
-                            <textarea placeholder="Beskrivelse" onfocus="this.placeholder = ''" 
-                                   onblur="this.placeholder = 'Beskrivelse'" rows="3" name="description" form="addSuggestionForm"></textarea>
+                            <textarea name="description" placeholder="Beskrivelse" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivelse'" rows="3" form="addSuggestionForm"></textarea>
 
-                            <select name="categories" id="categories" required form="addSuggestionForm">
-                                <option value="test1">Kategori</option>
-                                <option value="test2">Test2</option>
-                                <option value="test3">Test3</option>
-                                <option value="test4">Test4</option>
+                            <select name="category" id="categories" required form="addSuggestionForm">
+                                <?php foreach($categories as $category) { ?>
+                                    <option value="<?= $category->id ?>"><?= $category->category_name ?></option>
+                                <?php } ?>
                             </select>
 
                             <button id="send" type="submit">Send</button>
@@ -155,14 +198,10 @@
                 <section class="selectCategories g6-float-right">
                     <h3>Kategorier</h3>
                     <ul>
-                        <li>Test</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
+                        <li><a href="./forslag.php?category=0<?= (isset($_GET['sort']) ? '&sort=' . $_GET['sort'] : '') ?>">Alle</a></li>
+                        <?php foreach($categories as $category) { ?>
+                            <li><a href="./forslag.php?category=<?= $category->id . (isset($_GET['sort']) ? '&sort=' . $_GET['sort'] : '') ?>"><?= $category->category_name ?></a></li>
+                        <?php } ?>
                     </ul>
                 </section>
             </div>
@@ -172,9 +211,12 @@
 
                 <section class="sortBy">
                     <p id="sortByLabel">sorter etter</p>
-                    <form action="/sortBy.php">
-                        <button id="nyeste" type="submit">Nyeste</button>
-                        <button id="topprangert" type="submit">Topprangert</button>
+                    <form action="./forslag.php">
+                        <?php if(isset($_GET['category'])) { ?>
+                            <input value="<?= $_GET['category'] ?>" name="category" type="hidden"/>
+                        <?php } ?>
+                        <button id="nyeste" name="sort" value="0" type="submit">Nyeste</button>
+                        <button id="topprangert" name="sort" value="1" type="submit">Topprangert</button>
                     </form>
 
                     <!--
@@ -185,6 +227,26 @@
                     -->
                 </section>
 
+                <?php if(count($suggestions) > 0) { ?>
+                    <?php foreach($suggestions as $suggestion) { ?>
+                    <div class="contentBlockSugg w3-row g6-border-bottom">
+                        <div class="votes w3-col w3-hide-small"></div>
+                        <div class="text w3-rest">
+                            <h3><?= $suggestion->title ?></h3>
+                            <p><?= $suggestion->description ?></p>
+                        </div>
+                    </div>
+                    <?php } ?>
+                <?php } else { ?>
+                    <div class="contentBlockSugg w3-row g6-border-bottom">
+                        <div class="text w3-rest">
+                            <h3>Ingen forslag i denne kategorien!</h3>
+                        </div>
+                    </div>
+                <?php } ?>
+                
+                <!-- BEFORE PHP -->
+                <!--
                 <div class="contentBlockSugg w3-row g6-border-bottom">
                     <div class="votes w3-col w3-hide-small"></div>
                     <div class="text w3-rest">
@@ -226,7 +288,8 @@
                         Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis. Nominati iracundia ea ius, unum audiam eos eu. Laudem iisque ancillae vim te. Vis idque vidisse democritum et, in vel harum alienum dissentiet. In eirmod feugiat recteque eum. Viderer invidunt ad vel, eius corrumpit signiferumque sit te.</p>
                     </div>
                 </div>
-
+                -->
+                
             </div>
             
         </div>

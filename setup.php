@@ -19,6 +19,7 @@ $database->addConnection([
     'username' => 'telmat15_common',
     'password' => 'Detteergruppe6',
     'database' => 'telmat15_Gruppe6',
+    'charset' => 'utf8',
     'collation' => 'utf8_general_ci',
 ]);
 

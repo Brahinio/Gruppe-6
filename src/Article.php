@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 // Vi lager en ny kategori modell-klasse. En modell-klasse representerer en
 // tabell i databasen, i dette tilfellet 'categories'.
-class Event extends Model
+class Article extends Model
 {
     public $timestamps = false;
 

@@ -231,7 +231,7 @@ input[name=description] {
         }
 
 .selectCategories {
-    width: 170px;
+    width: 85%;
     right: 0px;
     border: 1px solid #ccc;
 }
@@ -259,11 +259,11 @@ input[name=description] {
             width: 90px !important;
             height: 70px;
             border: 1px solid #ccc;
-            margin-right: 50px;
+            margin-right: 35px;
         }
 
         .text {
-            margin-top: -15px;
+            margin-top: -17px;
             margin-bottom: 30px;
         }
 
@@ -271,3 +271,24 @@ input[name=description] {
             /* font-size: .91em; */
             min-height: 50px;
         }
+
+/****************************************************/
+/****************************************************/
+/**/
+/**/
+/*             apply below resolutions css          */
+/**/
+/**/
+/****************************************************/
+/****************************************************/
+
+@media screen and (max-width: 900px) {
+    
+    .votes {
+        margin-right: 30px !important;
+    }
+    
+    .selectCategories ul {
+        padding-left: 18px;
+    }
+}

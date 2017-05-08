@@ -128,8 +128,8 @@
             <section class="feeds w3-row g6-margin-top">
                 <div class="w3-row g6-margin">
                     <div class="w3-half g6-content-padding extra-right-space">
-                        <p>Det er mye kult rundt campus- men det finnes<br>
-                            like mye kult på campus! Sjekk ut disse tilbudene:</p>
+                        <p>Det er mye interessant rundt campus- men det finnes<br>
+                            like mye fett på campus! Sjekk ut disse tilbudene:</p>
                         <ul>
                             <li>Skjenkestua Studentbar</li>
                             <li>Westerdals Makerspace</li>

@@ -237,13 +237,13 @@ li {
         margin-bottom: 30px !important;
     }
     
-    g6-margin-top {
+    .g6-margin-top {
         margin-top: 30px !important;
     }
     
-    g6-threequarter-top, g6-quarter-top {
-    float: left;
-    width: 50%;
+    .g6-threequarter-top, .g6-quarter-top {
+        float: left;
+        width: 50%;
     }
 }
 

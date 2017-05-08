@@ -22,7 +22,7 @@
                 <div class="w3-display-container mySlides">
                     <img src="img/img_mountains_wide.jpg" style="width:100%">
                     <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-                        Northern Lights, Norway
+                        Vakre lys, Norway
                     </div>
                 </div>
 
@@ -127,8 +127,16 @@
 
             <section class="feeds w3-row g6-margin-top">
                 <div class="w3-row g6-margin">
-                    <div class="w3-half g6-content-padding">
-                        <p>- legg på farger!</p>
+                    <div class="w3-half g6-content-padding extra-right-space">
+                        <p>Det er mye kult rundt campus- men det finnes<br>
+                            like mye kult på campus! Sjekk ut disse tilbudene:</p>
+                        <ul>
+                            <li>Skjenkestua Studentbar</li>
+                            <li>Westerdals Makerspace</li>
+                            <li>Biblioteket (låne retrokonsoller, anyone?)</li>
+                            <li>VR og greenroom på Brenneriveien</li>
+                            <li>Eller kanskje du vil bli en foreningsnerd?</li>
+                        </ul>
                     </div>
                     <div class="twitterFeed w3-half w3-card-2 g6-center g6-content-padding">
                         <a class="twitter-timeline" data-height="400" data-width="400" href="https://twitter.com/westerdalsact">Tweets fra Westerdals ACT</a> 

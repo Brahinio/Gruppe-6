@@ -234,7 +234,7 @@ $categories = Category::all();
                             <div class="g6-center">
                                 <div class="votesCount"><h4>33423</h4></div>
                                 <div class="stemmer"><p>stemmer</p></div>
-                                <button class="vote" name="stem" type="submit">Stem</button>
+                                <button class="vote" onclick="setCookie('<?= $suggestion->id ?>', '1', '30')" name="stem" type="submit">Stem</button>
                             </div>
                         </div>
                         <div class="text w3-rest">
@@ -254,14 +254,15 @@ $categories = Category::all();
                     </div>
                 <?php } ?>
                 
-<div class="w3-bar g6-center g6-margin">
-    <a href="#" class="w3-button">«</a>
-    <a href="#" class="w3-button w3-green">1</a>
-    <a href="#" class="w3-button">2</a>
-    <a href="#" class="w3-button">3</a>
-    <a href="#" class="w3-button">4</a>
-    <a href="#" class="w3-button">»</a>
-</div>
+                <!-- Pagination -->
+                <div class="w3-bar g6-center g6-margin">
+                    <a href="#" class="w3-button">«</a>
+                    <a href="#" class="w3-button w3-green">1</a>
+                    <a href="#" class="w3-button">2</a>
+                    <a href="#" class="w3-button">3</a>
+                    <a href="#" class="w3-button">4</a>
+                    <a href="#" class="w3-button">»</a>
+                </div>
                 
                 <!-- BEFORE PHP -->
                 <!--

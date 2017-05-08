@@ -1,10 +1,19 @@
 <html>
     
     <!-- Cookies -->
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+    </script>
+    
     <div class="w3-row">
         <div class="g6-cookies g6-padding">
             <div class="w3-content w3-display-container g6-center">
-                <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-remove"></i></span>
+                <span onclick="this.parentElement.style.display='none'; setCookie('cAccepted', '1337', '365');" class="w3-button w3-display-topright"><i class="fa fa-remove"></i></span>
                 <h3>This website might contain cookies</h2>
                 <p>But you can't eat them! <a href="/cookies.php">Les mer om våre informasjonskapsler (cookies)</a></p>
             </div>

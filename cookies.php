@@ -8,8 +8,7 @@
     ?>
     
     <div class="w3-row">
-
-        <section class="contentBlockIndex w3-content ">
+        <section class="contentBlockIndex w3-content">
             
             <h3>Denne websiden bruker informasjonskapsler (cookies)</h3>
 
@@ -48,7 +47,6 @@
                 Du har til enhver tid mulighet til å trekke tilbake ditt samtykke og brukere som ikke godtar bruken av cookies, 
                 må selv endre disse, dersom nettleserens innstillinger er forhåndsinnstilt for aksept.
             </p>
-            
         </section>
         
     </div>

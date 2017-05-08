@@ -60,6 +60,7 @@
                          }
                     </script>
 
+                    <!-- Menu -->
                     <div class="w3-dropdown-click">
                         <button onclick="showHideMenu()" class="w3-button hamburger hamburger-anim">
                             <h3 id="menuLabel">MENY</h3>

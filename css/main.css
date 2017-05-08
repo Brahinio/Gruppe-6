@@ -408,10 +408,14 @@ li {
 /****************************************************/
 
 .g6-cookies {
-    opacity: 0.6 !important;
     background-color: #eee !important;
     margin-top: 40px;
     font-size: 0.9em;
+    
+    position: fixed !important;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1001;
 }
 
 .g6-footer {

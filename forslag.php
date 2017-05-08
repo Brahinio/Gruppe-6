@@ -241,7 +241,7 @@ $categories = Category::all();
                             <h3><?= $suggestion->title ?></h3>
                             <p><?= $suggestion->description ?></p>
                             <div class="additionalData">
-                                <p><span>Lagt til:</span> 08/05/17</p>
+                                <p><span>Lagt til:</span> 08/05/17 <span class="addSpace">Kategori:</span> Aktiviteter</p>
                             </div>
                         </div>
                     </div>

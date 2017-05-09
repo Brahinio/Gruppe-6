@@ -159,7 +159,7 @@ $categories = Category::all();
                                 }
                             }
                             
-                            function submitVote(id) {                 
+                            function submitVote(id) {
                                 var xhttp = new XMLHttpRequest();
                                 xhttp.onreadystatechange = function() {
                                     if (this.readyState == 4 && this.status == 200) {
@@ -168,10 +168,11 @@ $categories = Category::all();
                                         // kjør kode for å endre knappen
                                         var voting = document.getElementById("vote-" + id);
                                         var votingCount = document.getElementById("voteCount-" + id);
-                                        voting.className += " voted";
-                                        voting.firstChild.data = "Stemt!";
-                                        votingCount.firstChild.data = parseInt(votingCount.firstChild.data) + 1;
-
+                                        if(voting.firstChild.data != "Stemt!") {
+                                            voting.className += " voted";
+                                            voting.firstChild.data = "Stemt!";
+                                            votingCount.firstChild.data = parseInt(votingCount.firstChild.data) + 1;
+                                        }
                                     }
                                 };
                                 xhttp.open("POST", "submitVote.php", true);

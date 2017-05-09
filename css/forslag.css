@@ -292,6 +292,7 @@ input[name=description] {
             background-color: #d0e5d0;
             margin-top: -22px;
             visibility: hidden;
+            color: green;
         }
 
         .text {

@@ -57,8 +57,18 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                         <?php foreach($categories as $category) { ?>
                             <option value="<?= $category->id ?>" <?= (isset($categoryId) && $categoryId == $category->id) ? 'selected' : '' ?>><?= $category->category_name ?></option>
                         <?php } ?>
+                        
+                     </select>
+                        
+                     <select class="w3-right w3-margin-right" name="category" onchange="this.form.submit()">
+                        
+                        <option value="0">Pris</option>
+                        <?php foreach($categories as $category) { ?>
+                            <option value="<?= $category->id ?>" <?= (isset($categoryId) && $categoryId == $category->id) ? 'selected' : '' ?>><?= $category->category_name ?></option>
+                        <?php } ?>
 
                     </select>
+
                 </form>
                 
             </div>
@@ -66,32 +76,45 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
             <!-- INNHOLD LAGES HER! -->  
             <?php foreach($articles as $article) { ?>
             
-                <div class="w3-border-bottom" style="height:600px">
+                <div class="w3-border-bottom" style="display:inline-block; width:100%; padding-top:5%;">
 
-                    <div class="w3-left w3-twothird" style="height:100%"> 
+                    <div class="w3-left w3-twothird" style="height:100%;"> 
 
-                        <img class="w3-border" src="<?= $article->image_url ?>" alt="bilde" style="width:75%; margin:auto;">
+                        <img class="w3-border w3-margin-left" src="<?= $article->image_url ?>" alt="bilde" style="width:65%; margin:auto;"> 
                         
-                        <h3><?= $article->title ?></h3>
-                        <p style="padding-left:10%;"><?= $article->description ?></p>
-
+                        <h3 style="padding-left:5%;"><?= $article->title ?></h3>
+                        <p style="padding-left:10%;"><?= $article->description ?>  
+                            
+                            <img style="width:4%; margin-left:40%;"  
+                            src="1494356430_BT_dollar.png">
+                            
+                            <img style="width:4%;" src="1494356430_BT_dollar.png">
+                            
+                                 
+                        </p> 
+                
+                        <br><br>
+                          
                     </div>
-
-
+                   
                     <div class="w3-left w3-third" style="height:100%">
 
                        <div class="w3-full w3-center">
+                           
 
-                           <img  src="1491419678_map-icon.png" alt="kart" style="width:100%;">
+                           <img  src="1491419678_map-icon.png" alt="kart" class="w3-border" style="width:100%;">
+                           
+                             <div class="twitterFeed w3-twothree w3-card-2 g6-center g6-content-padding w3-margin-top w3-margin-bottom">
+                                <a class="twitter-timeline" data-height="100%" data-width="100%" href="https://twitter.com/westerdalsact">Tweets fra Westerdals ACT</a> 
+                                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> <br><br>
+                            </div>
 
                         </div> 
-
-                        <div class="w3-border w3-black" style=" height:36%;"></div>
 
                     </div>
 
                 </div>
-            
+            <br><br><br>
             <?php } ?>
             
         </div>

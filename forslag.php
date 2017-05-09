@@ -177,8 +177,10 @@ $categories = Category::all();
                                         */
                                         var voting = document.getElementById("vote-" + id);
                                         var voted = document.getElementById("voted-" + id);
+                                        var votingCount = document.getElementById("voteCount-" + id);
                                         voting.style.visibility = 'hidden';
                                         voted.style.visibility = 'visible';
+                                        votingCount.firstChild.data = parseInt(votingCount.firstChild.data) + 1;
                                     }
                                 }
                                 xhttp.open("POST", "submitVote.php", true);

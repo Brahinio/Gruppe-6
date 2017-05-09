@@ -180,7 +180,7 @@ $categories = Category::all();
                                         voting.style.visibility = 'hidden';
                                         voted.style.visibility = 'visible';
                                     }
-                                };
+                                }
                                 xhttp.open("POST", "submitVote.php", true);
                                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                                 xhttp.send("vote_id=" + id);

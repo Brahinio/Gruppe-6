@@ -158,6 +158,25 @@ $categories = Category::all();
                                     }
                                 }
                             }
+                            
+                            function submitVote(id) {                 
+                                var xhttp = new XMLHttpRequest();
+                                xhttp.onreadystatechange = function() {
+                                    if (this.readyState == 4 && this.status == 200) {
+                                        setCookie('id', '1', '30');
+                                        
+                                        // kjør kode for å endre knappen
+                                        var voting = document.getElementById("vote-" + id);
+                                        var votingCount = document.getElementById("voteCount-" + id);
+                                        voting.className += " voted";
+                                        voting.firstChild.data = "Stemt!";
+                                        votingCount.firstChild.data = parseInt(votingCount.firstChild.data) + 1;
+
+                                    }
+                                };
+                                xhttp.open("POST", "submitVote.php", true);
+                                xhttp.send("vote_id=" + id);
+                            }
                         </script>
 
                         <!-- PLUS-MINUS button
@@ -232,9 +251,9 @@ $categories = Category::all();
                     <div class="contentBlockSugg w3-row g6-border-bottom">
                         <div class="votes w3-col">
                             <div class="g6-center">
-                                <div class="votesCount"><h4>33423</h4></div>
+                                <div class="votesCount"><h4 id="voteCount-<?= $suggestion->id ?>">33423</h4></div>
                                 <div class="stemmer"><p>stemmer</p></div>
-                                <button class="vote" onclick="setCookie('<?= $suggestion->id ?>', '1', '30')" name="stem" type="submit">Stem</button>
+                                <button id="vote-<?= $suggestion->id ?>" class="vote" onclick="submitVote('<?= $suggestion->id ?>')" name="stem" type="submit">Stem</button>
                             </div>
                         </div>
                         <div class="text w3-rest">

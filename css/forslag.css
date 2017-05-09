@@ -288,6 +288,10 @@ input[name=description] {
             background-color: #d0e5d0;
         }
 
+        .voted {
+            background-color: #d0e5d0 !important;
+        }
+
         .text {
             margin-top: -16px;
             margin-bottom: 30px;

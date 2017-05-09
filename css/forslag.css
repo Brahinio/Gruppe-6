@@ -289,7 +289,9 @@ input[name=description] {
         }
 
         .voted {
-            background-color: #d0e5d0 !important;
+            background-color: #d0e5d0;
+            margin-top: -22px;
+            visibility: hidden;
         }
 
         .text {

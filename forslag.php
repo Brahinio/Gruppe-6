@@ -166,6 +166,7 @@ $categories = Category::all();
                                         setCookie('id', '1', '30');
                                         
                                         // kjør kode for å endre knappen
+                                        /*
                                         var voting = document.getElementById("vote-" + id);
                                         var votingCount = document.getElementById("voteCount-" + id);
                                         if(voting.firstChild.data != "Stemt!") {
@@ -173,6 +174,11 @@ $categories = Category::all();
                                             voting.firstChild.data = "Stemt!";
                                             votingCount.firstChild.data = parseInt(votingCount.firstChild.data) + 1;
                                         }
+                                        */
+                                        var voting = document.getElementById("vote-" + id);
+                                        var voted = document.getElementById("voted-" + id);
+                                        voting.style.visibility = 'hidden';
+                                        voted.style.visibility = 'visible';
                                     }
                                 };
                                 xhttp.open("POST", "submitVote.php", true);
@@ -256,6 +262,7 @@ $categories = Category::all();
                                 <div class="votesCount"><h4 id="voteCount-<?= $suggestion->id ?>"><?= $suggestion->num_of_votes ?></h4></div>
                                 <div class="stemmer"><p>stemmer</p></div>
                                 <button id="vote-<?= $suggestion->id ?>" class="vote" onclick="submitVote('<?= $suggestion->id ?>')" name="stem" type="submit">Stem</button>
+                                <div id="voted-<?= $suggestion->id ?>" class="voted">Stemt!</div>
                             </div>
                         </div>
                         <div class="text w3-rest">

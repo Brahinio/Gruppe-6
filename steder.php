@@ -85,10 +85,12 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                         <h3 style="padding-left:5%;"><?= $article->title ?></h3>
                         <p style="padding-left:10%;"><?= $article->description ?>  
                             
-                            <img style="width:4%; margin-left:40%;"  
-                            src="1494356430_BT_dollar.png">
+                            <i class="fa fa-dollar"></i>
+                            <!--<img style="width:4%; margin-left:40%;"  
+                            src="1494356430_BT_dollar.png">-->
                             
-                            <img style="width:4%;" src="1494356430_BT_dollar.png">
+                            <i class="fa fa-dollar"></i>
+                            <!--<img style="width:4%;" src="1494356430_BT_dollar.png">-->
                             
                                  
                         </p> 

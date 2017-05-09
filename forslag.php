@@ -11,8 +11,6 @@ if (isset($_GET['category'])) {
 }
 
 if (isset($categoryId) && $categoryId != 0) {
-    $chosenCategory = Category::find($categoryId);
-    
     if(isset($_GET['sort'])) {
         if($_GET['sort'] == 0) {
             $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('date_added')->take($maxPerPage);
@@ -180,7 +178,7 @@ $categories = Category::all();
                                         voting.style.visibility = 'hidden';
                                         voted.style.visibility = 'visible';
                                     }
-                                }
+                                };
                                 xhttp.open("POST", "submitVote.php", true);
                                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                                 xhttp.send("vote_id=" + id);

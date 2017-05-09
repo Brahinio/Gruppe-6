@@ -176,6 +176,7 @@ $categories = Category::all();
                                     }
                                 };
                                 xhttp.open("POST", "submitVote.php", true);
+                                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                                 xhttp.send("vote_id=" + id);
                             }
                         </script>
@@ -252,7 +253,7 @@ $categories = Category::all();
                     <div class="contentBlockSugg w3-row g6-border-bottom">
                         <div class="votes w3-col">
                             <div class="g6-center">
-                                <div class="votesCount"><h4 id="voteCount-<?= $suggestion->id ?>">33423</h4></div>
+                                <div class="votesCount"><h4 id="voteCount-<?= $suggestion->id ?>"><?= $suggestion->num_of_votes ?></h4></div>
                                 <div class="stemmer"><p>stemmer</p></div>
                                 <button id="vote-<?= $suggestion->id ?>" class="vote" onclick="submitVote('<?= $suggestion->id ?>')" name="stem" type="submit">Stem</button>
                             </div>

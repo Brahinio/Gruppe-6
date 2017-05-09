@@ -76,25 +76,18 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
             <!-- INNHOLD LAGES HER! -->  
             <?php foreach($articles as $article) { ?>
             
-                <div class="w3-border-bottom" style="display:inline-block; width:100%; padding-top:5%;">
+                <div class="w3-border-bottom w3-margin-top" style="display:inline-block; width:100%;">
 
                     <div class="w3-left w3-twothird" style="height:100%;"> 
 
-                        <img class="w3-border w3-margin-left" src="<?= $article->image_url ?>" alt="bilde" style="width:65%; margin:auto;"> 
+                        <img class="w3-border" src="<?= $article->image_url ?>" alt="bilde" style="width:65%;"> 
                         
-                        <h3 style="padding-left:5%;"><?= $article->title ?></h3>
-                        <p style="padding-left:10%;"><?= $article->description ?>  
-                            
-                            <i class="fa fa-dollar"></i>
-                            <!--<img style="width:4%; margin-left:40%;"  
-                            src="1494356430_BT_dollar.png">-->
-                            
-                            <i class="fa fa-dollar"></i>
-                            <!--<img style="width:4%;" src="1494356430_BT_dollar.png">-->
-                            
-                                 
-                        </p> 
-                
+                        <h3><?= $article->title ?></h3>
+                        <p><?= $article->description ?></p>
+                        
+                        Pris: <i class="fa fa-dollar"></i>
+                              <i class="fa fa-dollar"></i>
+                        
                         <br><br>
                           
                     </div>
@@ -108,7 +101,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                            
                              <div class="twitterFeed w3-twothree w3-card-2 g6-center g6-content-padding w3-margin-top w3-margin-bottom">
                                 <a class="twitter-timeline" data-height="100%" data-width="100%" href="https://twitter.com/westerdalsact">Tweets fra Westerdals ACT</a> 
-                                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> <br><br>
+                                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
                             </div>
 
                         </div> 
@@ -116,7 +109,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                     </div>
 
                 </div>
-            <br><br><br>
+            
             <?php } ?>
             
         </div>
@@ -128,3 +121,4 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
 
 </body>
 </html>
+

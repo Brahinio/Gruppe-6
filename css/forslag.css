@@ -277,6 +277,7 @@ input[name=description] {
             color: green;
             padding: 0px !important;
             margin-top: -10px !important;
+            margin-bottom: -12px !important;
             border: none;
             width: 100%;
             background-color: #fafafa;
@@ -289,8 +290,11 @@ input[name=description] {
         }
 
         .voted {
+            padding: 0px !important;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
             background-color: #d0e5d0;
-            margin-top: -22px;
+            margin-top: -10px;
             visibility: hidden;
             color: green;
         }

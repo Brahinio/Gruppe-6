@@ -1,175 +1,85 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prosjekt</title>
-    <?php
-        require 'headScript.php';
-    ?>
+	<title>Kart</title>
     
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
     <style>
-        #clicktoshow{
-            border: none;
-            color: white;
-            padding: 10px 23px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            background-color: #555555;
+        textarea {
+            width: 90%;
         }
-        #clicktohide{
-            border: none;
-            color: white;
-            padding: 10px 23px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            background-color: #555555;
+        input[type=checkbox] {
+            margin-top: -6px;
+            margin-left: 8%;
         }
-        input[type=checkbox]:not(old){
-  width     : 2em;
-  margin    : 0;
-  padding   : 0;
-  font-size : 1em;
-  opacity   : 0;
-            cursor:pointer;
-}
-        input[type=checkbox]:not(old) + label{
-  display      : inline-block;
-  margin-left  : -2em;
-  line-height  : 1.5em;
-}
-        input[type=checkbox]:not(old) + label > span{
-  display          : inline-block;
-  width            : 0.875em;
-  height           : 0.875em;
-  margin           : 0.25em 0.5em 0.25em 0.25em;
-  border           : 1.2px solid black;
-  background       : rgb(224,224,224);
-  background-color : white;
-  vertical-align   : bottom;
-            
-}
-        input[type=checkbox]:not(old):checked + label > span{
-  background-color : white;
-}
-        input[type=checkbox]:not(old):checked + label > span:before{
-  content     : '✓';
-  display     : block;
-  color       : #4d4d4d;
-  font-size   : 20px;
-  line-height : 7px;
-  text-shadow : 0 0 0.0714em #262626;
-  font-weight : 900;
-}
-        label{
-            font-size: 15px;
-            padding-left: 10px;
-            margin-bottom: 8px;
+        label {
+            margin-left: -10%;
         }
-        
-        #textbox{
-            width: 170px;
-            height: 100px;
-            text-align: center;
-            border: 3px solid #262626;
-            background-color:white;
+        #googleMap {
+            padding-top: 75%;
         }
-        
-        #textbox:focus {
-            outline:none !important;
-        }
-        
-        #submit{
-    border: none;
-    color: white;
-    padding: 10px 23px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #555555;
-        }
-                .dataadd:focus {
-            outline:none !important;
-        }
-        
-        #type:focus{
-            outline:none !important;
-        }
-        
-                #submit:focus{
-            outline:none !important;
-        }
-        
-                #save:focus{
-            outline:none !important;
-        }
-        
-        .dataadd{
-            margin-top:10px;
-            margin-bottom: 10px;
-        }
-        #type{
-            width:150px;
-            margin-bottom:10px;
-        }
-        #save{
-    border: none;
-    color: white;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #555555;
-        }
-    #type * {
-        background-color:#DCDCDC;
-        color:#555555;
-        border: 1px solid black; 
-    }
-    #description{
-        resize:none;
-    }
-    #description:focus {
-        outline:none !important;
-    }
     </style>
+    
 </head>
 <body>
     
-    <div id="wrap">
-        
-        <?php
-            require 'header.php'
-        ?>
+    <?php require "header.php" ?>
 
-        <div id="content">
-
+        <div class="w3-content w3-center">
             <h1>Kart</h1>
-            <?php
-                require 'testkart.php';
-            ?>
+
+            <div class="w3-quarter w3-padding g6-bg">
+                <form>
+                    <p><textarea class="w3-input w3-padding-small w3-center" placeholder="Sted"></textarea></p>
+                    <p>
+                        <input id="checkbox1" class="w3-check w3-left" type="checkbox">
+                        <label for="checkbox1">Matbutikker</label>
+                    </p>
+                    <p>
+                        <input class="w3-check w3-left" type="checkbox">
+                        <label>Restauranter</label>
+                    </p>
+                    <p>
+                        <input class="w3-check w3-left" type="checkbox">
+                        <label>Aktiviteter</label>
+                    </p>
+                    <p>
+                        <input class="w3-check w3-left" type="checkbox">
+                        <label>Treningssenter</label>
+                    </p>
+                    <p>
+                        <input class="w3-check w3-left" type="checkbox">
+                        <label>Skoler</label>
+                    </p>
+                    <p>
+                        <button class="w3-btn w3-light-green w3-ripple">Søk</button>
+                    </p>
+                </form>
+            </div>
+            
+            <div class="w3-threequarter g6-bg">
+                <div id="googleMap" class="w3-margin" style=""></div>
+            </div>
+            
+            <script>
+                function myMap() {
+                    var mapProp = {
+                        center:new google.maps.LatLng(59.911491, 10.757933),
+                        zoom:15,
+                    };
+                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABU9OGK_b-B0QpXLeYWa8oaWseYaBBgUg&callback=myMap"></script>
 
         </div>
-        
-        
-        
-    </div>
+    
+    <?php require "footer.php" ?>
+    
 </body>
 </html>

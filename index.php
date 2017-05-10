@@ -131,11 +131,14 @@
                         <p>Det er mye interessant rundt campus- men det finnes<br>
                             like mye fett på campus! Sjekk ut disse tilbudene:</p>
                         <ul>
-                            <li>Skjenkestua Studentbar</li>
-                            <li>Westerdals Makerspace</li>
-                            <li>Biblioteket (låne retrokonsoller, anyone?)</li>
-                            <li>VR og greenroom på Brenneriveien</li>
-                            <li>Eller kanskje du vil bli en foreningsnerd?</li>
+                            <li><a href="https://www.facebook.com/SkjenkestuaStudentbar/?fref=ts" alt="Skjenkestua" target="_blank">Skjenkestua Studentbar</a></li>
+                            <li><a href="https://www.facebook.com/westerdalsmakerspace/?fref=ts" alt="Makerspace" target="_blank">Westerdals Makerspace</a></li>
+                            <li><a href="https://www.facebook.com/bibliowesterdalsosloact/?fref=ts" alt="Biblioteket" target="_blank">Biblioteket (låne retrokonsoller, anyone?)</a></li>
+                            <li><a href="https://www.westerdals.no/artikkel/greenscreenrom/" alt="VR og green room" target="_blank">VR og green room på Brenneriveien</a></li>
+                            <li><a href="https://www.facebook.com/westerdalsrevyen/?fref=ts" alt="Revyen" target="_blank">Westerdalsrevyen</a></li>
+                            <li><a href="https://www.facebook.com/groups/nith.ksb/?ref=br_rs" alt="kjop, salg, bytte" target="_blank">Kjøp, salg, bytte (Westerdals)</a></li>
+                            <li><a href="https://www.facebook.com/groups/327516017350960/" alt="fotball" target="_blank">Westerdals Fotball..... As if.</a></li>
+                            <li><a href="https://www.westerdals.no/foreninger/" alt="Foreninger" target="_blank">Eller kanskje du vil starte egen forening?</a></li>
                         </ul>
                     </div>
                     <div class="twitterFeed w3-half w3-card-2 g6-center g6-content-padding">

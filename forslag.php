@@ -11,8 +11,6 @@ if (isset($_GET['category'])) {
 }
 
 if (isset($categoryId) && $categoryId != 0) {
-    $chosenCategory = Category::find($categoryId);
-    
     if(isset($_GET['sort'])) {
         if($_GET['sort'] == 0) {
             $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('date_added')->take($maxPerPage);
@@ -163,7 +161,7 @@ $categories = Category::all();
                                 var xhttp = new XMLHttpRequest();
                                 xhttp.onreadystatechange = function() {
                                     if (this.readyState == 4 && this.status == 200) {
-                                        setCookie('id', '1', '30');
+                                        setCookie(("suggestion-" + id), '1', '30');
                                         
                                         // kjør kode for å endre knappen
                                         /*
@@ -182,7 +180,7 @@ $categories = Category::all();
                                         voted.style.visibility = 'visible';
                                         votingCount.firstChild.data = parseInt(votingCount.firstChild.data) + 1;
                                     }
-                                }
+                                };
                                 xhttp.open("POST", "submitVote.php", true);
                                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                                 xhttp.send("vote_id=" + id);
@@ -263,8 +261,8 @@ $categories = Category::all();
                             <div class="g6-center">
                                 <div class="votesCount"><h4 id="voteCount-<?= $suggestion->id ?>"><?= $suggestion->num_of_votes ?></h4></div>
                                 <div class="stemmer"><p>stemmer</p></div>
-                                <button id="vote-<?= $suggestion->id ?>" class="vote" onclick="submitVote('<?= $suggestion->id ?>')" name="stem" type="submit">Stem</button>
-                                <div id="voted-<?= $suggestion->id ?>" class="voted">Stemt!</div>
+                                <button id="vote-<?= $suggestion->id ?>" class="vote" onclick="submitVote('<?= $suggestion->id ?>')" name="stem" type="submit" style="<?= (isset($_COOKIE['suggestion-' . $suggestion->id]) ? 'visibility: hidden;' : 'visibility: visible;') ?>">Stem</button>
+                                <div id="voted-<?= $suggestion->id ?>" class="voted" style="<?= (isset($_COOKIE['suggestion-' . $suggestion->id]) ? 'visibility: visible;' : 'visibility: hidden;') ?>">Stemt!</div>
                             </div>
                         </div>
                         <div class="text w3-rest">

@@ -8,18 +8,30 @@ $maxPerPage = 10;
 $matbutikkerId = 2;
 $restauranterId = 3;
 
+// Hent pris sortering fra url
+if(isset($_GET['price'])){
+    $price = $_GET['price'];
+}
+
 // Hent kategori id fra url
 if (isset($_GET['category'])) {
     $categoryId = $_GET['category'];
 }
 
-if (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId)) {
-    $chosenCategory = Category::find($categoryId);
-    
-    $articles = Article::where('category_id', $categoryId)->get()->take($maxPerPage);
+// Hvis både pris og kategori id er satt og har riktige verdier
+if((isset($price) && $price > 0 && $price <=3) && (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId))) {
+    $articles = Article::where('price', $price)->where('category_id', $categoryId)->get()->take($maxPerPage);
+}
+// Hvis bare kategori id er satt og har riktig verdi
+else if (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId)) { 
+    $articles = Article::where('category_id', $categoryId)->get()->sortBy('price')->take($maxPerPage);
+}
+// Hvis bare pris er satt og har riktig verdi
+else if(isset($price) && $price > 0 && $price <= 3) {
+    $articles = Article::where('price', $price)->where('category_id', $matbutikkerId)->orWhere('price', $price)->Where('category_id', $restauranterId)->get()->take($maxPerPage);
 }
 else {
-    $articles = Article::where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId)->get()->take($maxPerPage);
+    $articles = Article::where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId)->get()->sortBy('price')->take($maxPerPage);
 }
 
 // Hent alle kategorier
@@ -51,7 +63,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
             <div class="w3-bar">
             
                 <form action="./steder.php">
-                    <select class="w3-right" name="category" onchange="this.form.submit()">
+                    <select class="w3-right w3-margin-right" name="category" onchange="this.form.submit()">
 
                         <option value="0">Alle</option>
                         <?php foreach($categories as $category) { ?>
@@ -60,11 +72,11 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                         
                      </select>
                         
-                     <select class="w3-right w3-margin-right" name="category" onchange="this.form.submit()">
+                     <select class="w3-right w3-margin-right" name="price" onchange="this.form.submit()">
                         
-                        <option value="0">Pris</option>
-                        <?php foreach($categories as $category) { ?>
-                            <option value="<?= $category->id ?>" <?= (isset($categoryId) && $categoryId == $category->id) ? 'selected' : '' ?>><?= $category->category_name ?></option>
+                        <option value="0">Alle priser</option>
+                        <?php for($i=1; $i <= 3; $i++) { ?>
+                            <option value="<?= $i ?>" <?= (isset($price) && $price == $i) ? 'selected' : '' ?>>Pris: <?php for($n=0; $n < $i; $n++) { ?>$<?php } ?></option>
                         <?php } ?>
 
                     </select>
@@ -80,13 +92,13 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
 
                     <div class="w3-left w3-twothird" style="height:100%;"> 
 
-                        <img class="w3-border" src="<?= $article->image_url ?>" alt="bilde" style="width:65%;"> 
+                        <img class="w3-padding" src="<?= $article->image_url ?>" alt="bilde" style="width:100%;">
                         
-                        <h3 class="w3-padding-left"><?= $article->title ?></h3>
-                        <p class="w3-padding-left"><?= $article->description ?></p>
+                        <h3 class="w3-margin-left"><?= $article->title ?></h3>
+                        <p class="w3-margin-left"><?= $article->description ?></p>
                         
-                        <p>Pris: <i class="fa fa-dollar"></i>
-                            <i class="fa fa-dollar"></i></p>
+                        <br>
+                        <span class="w3-margin-left">Pris: <?php for($i=0; $i < $article->price; $i++) { ?><i class="fa fa-dollar"></i><?php } ?></span>
                         
                         <br><br>
                           
@@ -94,14 +106,13 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                    
                     <div class="w3-left w3-third" style="height:100%">
 
-                       <div class="w3-full w3-center">
-                           
+                        <div class="w3-full w3-center w3-padding">
+                            
+                            <img src="1491419678_map-icon.png" alt="kart" style="width:100%;">
 
-                           <img  src="1491419678_map-icon.png" alt="kart" class="w3-border" style="width:100%;">
-                           
-                             <div class="twitterFeed w3-twothree w3-card-2 g6-center g6-content-padding w3-margin-top w3-margin-bottom">
-                                <a class="twitter-timeline" data-height="100%" data-width="100%" href="https://twitter.com/westerdalsact">Tweets fra Westerdals ACT</a> 
-                                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                            <div class="twitterFeed w3-twothree w3-card-2 g6-center g6-content-padding w3-margin-top w3-margin-bottom" style="100%">
+                                <a class="twitter-timeline" data-height="300" data-width="100%" href="https://twitter.com/<?= $article->twitter_username ?>">Tweets fra Westerdals ACT</a> 
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
                             </div>
 
                         </div> 

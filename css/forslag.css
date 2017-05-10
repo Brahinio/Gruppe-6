@@ -309,7 +309,7 @@ input[name=description] {
         .text {
             margin-top: -16px;
             margin-bottom: 30px;
-            min-height: 50px;
+            min-height: 95px;
         }
 
         .text p {

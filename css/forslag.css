@@ -256,11 +256,18 @@ input[name=description] {
             margin-bottom: 50px;
         }
 
+        .g6-threequarter {
+            width: 74%;
+            overflow: hidden;
+        }
+
         .votes {
             width: 80px !important;
             border: 1px solid #ccc;
             margin-right: 35px;
+            margin-bottom: 5px;
             border-radius: 5px;
+            float: left;
         }
 
         .votesCount {
@@ -277,7 +284,7 @@ input[name=description] {
             color: green;
             padding: 0px !important;
             margin-top: -10px !important;
-            margin-bottom: -12px !important;
+            margin-bottom: -13px !important;
             border: none;
             width: 100%;
             background-color: #fafafa;
@@ -340,5 +347,11 @@ input[name=description] {
     
     .selectCategories ul {
         padding-left: 18px;
+    }
+    
+    /* Text wraps around votebox */
+    .g6-threequarter {
+        overflow: visible !important;
+        width: 100%;
     }
 }

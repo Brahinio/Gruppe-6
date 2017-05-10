@@ -257,7 +257,7 @@ $categories = Category::all();
                 <?php if(count($suggestions) > 0) { ?>
                     <?php foreach($suggestions as $suggestion) { ?>
                     <div class="contentBlockSugg w3-row g6-border-bottom">
-                        <div class="votes w3-col">
+                        <div class="votes">
                             <div class="g6-center">
                                 <div class="votesCount"><h4 id="voteCount-<?= $suggestion->id ?>"><?= $suggestion->num_of_votes ?></h4></div>
                                 <div class="stemmer"><p>stemmer</p></div>
@@ -265,11 +265,11 @@ $categories = Category::all();
                                 <div id="voted-<?= $suggestion->id ?>" class="voted" style="<?= (isset($_COOKIE['suggestion-' . $suggestion->id]) ? 'visibility: visible;' : 'visibility: hidden;') ?>">Stemt!</div>
                             </div>
                         </div>
-                        <div class="text w3-rest">
+                        <div class="text g6-threequarter">
                             <h3><?= $suggestion->title ?></h3>
                             <p><?= $suggestion->description ?></p>
                             <div class="additionalData">
-                                <p><span>Lagt til:</span> 08/05/17 <span class="addSpace">Kategori:</span> Aktiviteter</p>
+                                <p><span>Lagt til:</span> 08/05/17 <span class="addSpace">Kategori:</span> Aktiviteter <span class="addSpace">Pris:</span> <i class="fa fa-dollar"></i></p>
                             </div>
                         </div>
                     </div>

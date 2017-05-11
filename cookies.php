@@ -34,15 +34,7 @@
                     <li>2. som er nødvendig for å levere en informasjonssamfunnstjeneste etter brukerens uttrykkelige forespørsel.</li>
                 </ul>
                     
-            <p>Denne websiden bruker Google Analytics til å sette cookies. 
-                Google Analytics er Googles analyseverktøy. Det hjelper innehavere av nettsteder og apper med å forstå hvordan besøkende bruker tjenestene deres. 
-                Dette verktøyet kan bruke et sett med informasjonskapsler for å samle informasjon og rapportere statistikk om bruk av nettsteder,
-                uten at enkelte besøkende identifiseres for Google. Hovedinformasjonskapselen som brukes av Google Analytics heter «__ga».<br><br> 
-                
-                I tillegg til å rapportere statistikk om bruk av nettsteder kan Google Analytics også brukes sammen med noen av informasjonskapslene for 
-                reklame som er beskrevet ovenfor, for å vise mer relevante annonser i Google-tjenester (som Google Søk) og på Internett generelt.<br><br> 
-                
-                Ved å bruke vår webside godkjenner du at vi setter cookies i din nettleser.<br><br> 
+            <p>Ved å bruke vår webside godkjenner du at vi setter cookies i din nettleser.<br><br> 
                 
                 Du har til enhver tid mulighet til å trekke tilbake ditt samtykke og brukere som ikke godtar bruken av cookies, 
                 må selv endre disse, dersom nettleserens innstillinger er forhåndsinnstilt for aksept.

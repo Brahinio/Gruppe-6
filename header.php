@@ -22,7 +22,7 @@
             <div class="w3-row g6-zindex-top">
                 <div class="g6-threequarter-top">
                     <div class="w3-half">
-                        <a href="./" alt="forside"><h3 id="logo">OVERSKRIFT</h3></a>
+                        <a href="./" alt="forside"><h3 id="logo">WeSup</h3></a>
                     </div>
 
                     <!-- Icon menu -->

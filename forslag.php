@@ -46,14 +46,15 @@ $categories = Category::all();
     <link rel="stylesheet" type="text/css" href="css/forslag.css">
     <title>Forslag</title>
 </head>
+
+    <?php require_once 'header.php'; ?>
+
 <body>
-    
-    <?php 
-        require_once 'header.php';
-    ?>
     
     <div class="w3-row">
         <div class="w3-content g6-padding">
+            
+            <div class="g6-center"><h1>Forslag</h1></div>
             
             <div class="w3-threequarter">
                 <div id="containerSuggestions">

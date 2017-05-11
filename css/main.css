@@ -113,7 +113,8 @@ li {
 
 /* Gruppe 6 standards */
 .g6-bg {
-    background-color: #f1f1eb !important;
+    background-color: #55acee !important;
+    /* background-color: #f1f1eb !important; */
 }
 
 .g6-zindex-top {
@@ -220,37 +221,6 @@ li {
 /****************************************************/
 /**/
 /**/
-/*             apply below resolutions css          */
-/**/
-/**/
-/****************************************************/
-/****************************************************/
-
-@media screen and (max-width: 900px) {
-    
-    /* we hide the label because at these screensizes, people know what the symbol means */
-    #menuLabel {
-        visibility: hidden !important;
-    }
-    
-    .g6-margin {
-        margin-bottom: 30px !important;
-    }
-    
-    .g6-margin-top {
-        margin-top: 30px !important;
-    }
-    
-    .g6-threequarter-top, .g6-quarter-top {
-        float: left;
-        width: 50%;
-    }
-}
-
-/****************************************************/
-/****************************************************/
-/**/
-/**/
 /*                  header css                      */
 /**/
 /**/
@@ -260,6 +230,9 @@ li {
 /* Header section */
 #logo {
     margin-top: 40px;
+    
+    font-size: 1.4em !important;
+    color: #fff;
 }
 
 .g6-quarter-top {
@@ -424,4 +397,35 @@ li {
 
 .g6-footer-content {
     margin-top: 50px !important;
+}
+
+/****************************************************/
+/****************************************************/
+/**/
+/**/
+/*             apply below resolutions css          */
+/**/
+/**/
+/****************************************************/
+/****************************************************/
+
+@media screen and (max-width: 900px) {
+    
+    /* we hide the label because at these screensizes, people know what the symbol means */
+    #menuLabel {
+        visibility: hidden !important;
+    }
+    
+    .g6-margin {
+        margin-bottom: 30px !important;
+    }
+    
+    .g6-margin-top {
+        margin-top: 30px !important;
+    }
+    
+    .g6-threequarter-top, .g6-quarter-top {
+        float: left;
+        width: 50%;
+    }
 }

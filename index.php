@@ -1,12 +1,11 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Forside</title>
+    <title>WeSup</title>
 </head>
+
+    <?php require_once 'header.php'; ?>
+
 <body>
-    
-    <?php 
-        require_once 'header.php';
-    ?>
     
     <div class="w3-row g6-no-header-space">
 

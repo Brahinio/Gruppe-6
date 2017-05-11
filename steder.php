@@ -47,18 +47,15 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Navn</title>
 </head>
     
-<?php 
-    require_once 'header.php';
-?>
+    <?php require_once 'header.php'; ?>
     
 <body>
      
     <div class="w3-row">
-        <div class="w3-content">
+        <div class="w3-content g6-padding">
             
             <div class="w3-bar">
             

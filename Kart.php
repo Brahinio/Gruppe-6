@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+    <!-- LEGG I EKSTERN CSS FIL -->
     <style>
         textarea {
             width: 90%;
@@ -25,11 +24,12 @@
     </style>
     
 </head>
-<body>
     
-    <?php require "header.php" ?>
+    <?php require "header.php"; ?>
+    
+<body>
 
-        <div class="w3-content w3-center">
+        <div class="w3-content g6-padding w3-center">
             <h1>Kart</h1>
 
             <div class="w3-quarter w3-padding g6-bg">

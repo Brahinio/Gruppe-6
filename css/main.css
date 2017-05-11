@@ -252,6 +252,8 @@ li {
 .g6-quarter-top {
     width: 24.99999%;
     float: left;
+    
+    z-index: 9999;
 }
 
 .g6-threequarter-top {
@@ -304,7 +306,8 @@ li {
     margin: 0;
     overflow: visible;
 
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    opacity: 1;
 }
 
 .hamburger:hover {
@@ -346,7 +349,7 @@ li {
 .hamburger-inner::before, .hamburger-inner::after {
     content: "";
     display: block; 
-        color: #fff;
+    color: #fff;
 }
 
 .hamburger-inner::before {

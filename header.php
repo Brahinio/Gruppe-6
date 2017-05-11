@@ -17,12 +17,13 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
 </head>
 
-    <div class="w3-row g6-bg g6-top g6-zindex-top g6-shadow">
+    <div class="w3-row g6-bg-top g6-top g6-zindex-top g6-shadow">
         <div class="w3-content g6-full-width g6-zindex-top g6-padding">
             <div class="w3-row g6-zindex-top">
                 <div class="g6-threequarter-top">
                     <div class="w3-half">
-                        <a href="./" alt="forside"><h3 id="logo">WeSup</h3></a>
+                        <h3 id="logo"><a href="./" alt="forside">WeSup</a></h3>
+                        <p class="logo-ingress">studentenes anbefalinger</p>
                     </div>
 
                     <!-- Icon menu -->

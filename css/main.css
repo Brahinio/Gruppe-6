@@ -117,6 +117,10 @@ li {
 
 /* Gruppe 6 standards */
 .g6-bg {
+    background-color: #f1f1eb !important;
+}
+
+.g6-bg-top {
     background-color: #55acee !important;
     /* background-color: #f1f1eb !important; */
 }
@@ -233,10 +237,16 @@ li {
 
 /* Header section */
 #logo {
-    margin-top: 40px;
+    margin-top: 30px;
     
-    font-size: 1.4em !important;
+    font-size: 1.8em !important;
     color: #fff;
+}
+
+.logo-ingress {
+    color: #fff;
+    /* color: #e2f6ff; */
+    margin-top: -20px;
 }
 
 .g6-quarter-top {

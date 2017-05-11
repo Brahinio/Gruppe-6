@@ -42,6 +42,8 @@ $categories = Category::all();
 
 ?>
 
+<!DOCTYPE html>
+<html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/forslag.css">
     <title>Forslag</title>
@@ -348,3 +350,4 @@ $categories = Category::all();
     ?>
 
 </body>
+</html>

@@ -47,7 +47,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Navn</title>
+    <title>Steder</title>
 </head>
     
     <?php require_once 'header.php'; ?>
@@ -56,6 +56,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
      
     <div class="w3-row">
         <div class="w3-content g6-padding">
+            <div class="g6-center"><h1>Steder</h1></div>
             
             <div class="w3-bar">
             

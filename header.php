@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
 </head>
 
-<html>
     <div class="w3-row g6-bg g6-top g6-zindex-top g6-shadow">
         <div class="w3-content g6-full-width g6-zindex-top g6-padding">
             <div class="w3-row g6-zindex-top">

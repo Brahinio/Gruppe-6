@@ -22,14 +22,13 @@
             padding-top: 75%;
         }
     </style>
-    
 </head>
     
     <?php require "header.php"; ?>
     
 <body>
-
-        <div class="w3-content g6-padding w3-center">
+    <div class="w3-row">
+        <div class="w3-content g6-padding g6-center">
             <h1>Kart</h1>
 
             <div class="w3-quarter w3-padding g6-bg">
@@ -78,6 +77,7 @@
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABU9OGK_b-B0QpXLeYWa8oaWseYaBBgUg&callback=myMap"></script>
 
         </div>
+    </div>
     
     <?php require "footer.php" ?>
     

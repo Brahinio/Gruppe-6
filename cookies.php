@@ -1,14 +1,16 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title><?php echo "Forside"; ?></title>
+    <title>Cookies</title>
 </head>
 <body>
     
-    <?php 
-        require_once 'header.php';
-    ?>
+    <?php require_once 'header.php'; ?>
     
     <div class="w3-row">
-        <section class="contentBlockIndex w3-content">
+        <section class="contentBlockIndex w3-content g6-padding">
+            
+            <div><h1>Cookies</h1></div>
             
             <h3>Denne websiden bruker informasjonskapsler (cookies)</h3>
 
@@ -43,8 +45,7 @@
         
     </div>
     
-    <?php 
-        require_once 'footer.php';
-    ?>
+    <?php require_once 'footer.php'; ?>
 
 </body>
+</html>

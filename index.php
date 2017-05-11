@@ -16,21 +16,21 @@
                 <div class="w3-display-container mySlides">
                     <img src="img/img_fjords_wide.jpg" style="width:100%">
                     <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-                        Trolltunga, Norway
+                       <h3>Trolltunga, Norway</h3>
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="img/img_mountains_wide.jpg" style="width:100%">
                     <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-                        Vakre lys, Norway
+                        <h3>Vakre lys, Norway</h3>
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="img/img_nature_wide.jpg" style="width:100%">
                     <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-                        Beautiful Mountains
+                        <h3>Beautiful Mountains</h3>
                     </div>
                 </div>
 

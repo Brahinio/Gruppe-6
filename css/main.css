@@ -313,7 +313,10 @@ li {
 
 #menuLabel {
     margin-top: 25px;
-    /* opacity: 0.6; */ 
+    /* opacity: 0.6; */
+    
+    /* For blue background */
+    color: #fff;
 }
 
 .hamburger-box {
@@ -343,20 +346,24 @@ li {
 .hamburger-inner::before, .hamburger-inner::after {
     content: "";
     display: block; 
+        color: #fff;
 }
 
 .hamburger-inner::before {
     top: -10px;
+    background-color: #fff;
 }
 
 .hamburger-inner::after {
-    bottom: -10px; 
+    bottom: -10px;
+    background-color: #fff;
 }
 
 .hamburger-anim .hamburger-inner {
     top: 2px;
     transition-duration: .200s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: #fff;
 }
 
 .hamburger-anim .hamburger-inner::before {

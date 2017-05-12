@@ -131,7 +131,7 @@
                     <div class="w3-half g6-content-padding extra-right-space">
                         <p>Det er mye interessant rundt campus- men det finnes<br>
                             like mye fett på campus! Sjekk ut disse tilbudene:</p>
-                        <ul>
+                        <ul class="campus-lenker">
                             <li><a href="https://www.facebook.com/SkjenkestuaStudentbar/?fref=ts" alt="Skjenkestua" target="_blank">Skjenkestua Studentbar</a></li>
                             <li><a href="https://www.facebook.com/westerdalsmakerspace/?fref=ts" alt="Makerspace" target="_blank">Westerdals Makerspace</a></li>
                             <li><a href="https://www.facebook.com/bibliowesterdalsosloact/?fref=ts" alt="Biblioteket" target="_blank">Biblioteket (låne retrokonsoller, anyone?)</a></li>

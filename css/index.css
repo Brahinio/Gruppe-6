@@ -70,6 +70,11 @@
 }
 */
 
+.campus-lenker {
+    margin-top: 20px;
+    line-height: 1.8em;
+}
+
 /* Instagram / YouTube feed */
 .juicer-feed.loaded {
     border: 1px solid #efefef;

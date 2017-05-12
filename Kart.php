@@ -1,66 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/kart.css">
 	<title>Kart</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-    <!-- LEGG I EKSTERN CSS FIL -->
-    <style>
-        textarea {
-            width: 90%;
-        }
-        input[type=checkbox] {
-            margin-top: -6px;
-            margin-left: 8%;
-        }
-        label {
-            margin-left: -10%;
-        }
-        #googleMap {
-            padding-top: 75%;
-        }
-    </style>
 </head>
     
     <?php require "header.php"; ?>
     
 <body>
     <div class="w3-row">
-        <div class="w3-content g6-padding g6-center">
-            <h1>Kart</h1>
+        <div class="w3-content">
+            <div class="g6-center"><h1>Kart</h1></div>
 
-            <div class="w3-quarter w3-padding g6-bg">
+            <div class="w3-quarter w3-padding g6-bg g6-margin-top">
                 <form>
-                    <p><textarea class="w3-input w3-padding-small w3-center" placeholder="Sted"></textarea></p>
-                    <p>
-                        <input id="checkbox1" class="w3-check w3-left" type="checkbox">
-                        <label for="checkbox1">Matbutikker</label>
-                    </p>
-                    <p>
-                        <input class="w3-check w3-left" type="checkbox">
-                        <label>Restauranter</label>
-                    </p>
-                    <p>
-                        <input class="w3-check w3-left" type="checkbox">
-                        <label>Aktiviteter</label>
-                    </p>
-                    <p>
-                        <input class="w3-check w3-left" type="checkbox">
-                        <label>Treningssenter</label>
-                    </p>
-                    <p>
-                        <input class="w3-check w3-left" type="checkbox">
-                        <label>Skoler</label>
-                    </p>
-                    <p>
-                        <button class="w3-btn w3-light-green w3-ripple">Søk</button>
-                    </p>
+                    <textarea class="select-kategorier w3-input w3-padding-small" placeholder="Sted"></textarea>
+                    <div class="checkboxes w3-left">
+                        <input class="g6-check" type="checkbox"><br>
+                        <input class="g6-check" type="checkbox"><br>
+                        <input class="g6-check" type="checkbox"><br>
+                        <input class="g6-check" type="checkbox"><br>
+                        <input class="g6-check" type="checkbox">
+                    </div>
+                    <div class="label-kategorier">
+                        <p>Matbutikker</p>
+                        <p>Restauranter</p>
+                        <p>Aktiviteter</p>
+                        <p>Treningssenter</p>
+                        <p>Skoler</p>
+                    </div>
+                    <button class="g6-search-kart w3-btn w3-light-green w3-ripple">Søk</button>
                 </form>
             </div>
             
-            <div class="w3-threequarter g6-bg">
+            <div class="w3-threequarter g6-bg g6-margin-top">
                 <div id="googleMap" class="w3-margin" style=""></div>
             </div>
             

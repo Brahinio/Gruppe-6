@@ -1,0 +1,36 @@
+.g6-check, .g6-radio {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 6px;
+}
+
+.select-kategorier {
+
+}
+
+.checkboxes {
+    margin: 0px 15px 0px 15px;
+}
+
+.g6-check {
+    margin-top: 14px;
+}
+
+.label-kategorier {
+    
+}
+
+.g6-search-kart {
+    margin-left: 15px;
+}
+
+        textarea {
+            width: 90%;
+        }
+        label {
+            margin-left: -10%;
+        }
+        #googleMap {
+            padding-top: 75%;
+        }

@@ -71,7 +71,7 @@
 
                     <!-- Menu -->
                     <div class="w3-dropdown-click">
-                        <button onclick="showHideMenu()" class="w3-button hamburger hamburger-anim">
+                        <button onclick="showHideMenu()" class="g6-burger w3-button hamburger hamburger-anim">
                             <h3 id="menuLabel">MENY</h3>
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>

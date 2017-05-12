@@ -39,6 +39,10 @@ h1 {
     font-size: 22px !important;
 }
 
+h2 {
+    font-size: 26px !important;
+}
+
 h3 {
     font-size: 1.1em !important;
     font-weight: normal;
@@ -198,11 +202,11 @@ li {
 }
 
 .g6-margin {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .g6-margin-top {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .g6-center {
@@ -237,7 +241,7 @@ li {
 
 /* Header section */
 #logo {
-    margin-top: 30px;
+    margin-top: 20px;
     
     font-size: 1.8em !important;
     color: #fff;
@@ -290,6 +294,11 @@ li {
 
 .w3-dropdown-hover:first-child, .w3-dropdown-click:hover {
     background-color: #ddd !important;
+}
+
+.g6-burger {
+    margin-top: -10px !important;
+    padding-bottom: 20px !important;
 }
 
 .hamburger {

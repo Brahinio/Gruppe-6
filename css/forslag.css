@@ -22,7 +22,7 @@
         #search label {
             position: absolute;
             left: 10px;
-            top: 9px;
+            top: 6px;
         }
 
         #search-input {
@@ -200,8 +200,6 @@ input[name=description] {
 #send {
     position: relative;
     float: right;
-
-    background-color: white;
 }
 
         /* Sort by section */

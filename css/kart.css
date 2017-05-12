@@ -1,3 +1,8 @@
+.sok-kategorier {
+    margin: 15px;
+    width: 100px;
+}
+
 .g6-check, .g6-radio {
     width: 16px;
     height: 16px;
@@ -11,6 +16,7 @@
 
 .checkboxes {
     margin: 0px 15px 0px 15px;
+    width: 15px;
 }
 
 .g6-check {
@@ -18,19 +24,18 @@
 }
 
 .label-kategorier {
-    
+    width: 45px;
+    float: right;
 }
 
 .g6-search-kart {
     margin-left: 15px;
 }
 
-        textarea {
-            width: 90%;
-        }
-        label {
-            margin-left: -10%;
-        }
+.sok-sted {
+    border-radius: 15px;
+}
+
         #googleMap {
             padding-top: 75%;
         }

@@ -15,14 +15,14 @@
         <div class="w3-content">
             <div class="g6-center"><h1>Kart</h1></div>
 
-            <div class="w3-quarter w3-padding g6-bg g6-margin-top">
-                <form>
-                    <textarea class="select-kategorier w3-input w3-padding-small" placeholder="Sted"></textarea>
+            <div class="w3-quarter w3-padding g6-bg">
+                <form class="sok-kategorier">
+                    <input class="sok-sted" type="text" name="sted" placeholder="Sted" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sted'" autocomplete="off" spellcheck="false" autocorrect="off" required>
                     <div class="checkboxes w3-left">
-                        <input class="g6-check" type="checkbox"><br>
-                        <input class="g6-check" type="checkbox"><br>
-                        <input class="g6-check" type="checkbox"><br>
-                        <input class="g6-check" type="checkbox"><br>
+                        <input class="g6-check" type="checkbox">
+                        <input class="g6-check" type="checkbox">
+                        <input class="g6-check" type="checkbox">
+                        <input class="g6-check" type="checkbox">
                         <input class="g6-check" type="checkbox">
                     </div>
                     <div class="label-kategorier">
@@ -32,11 +32,11 @@
                         <p>Treningssenter</p>
                         <p>Skoler</p>
                     </div>
-                    <button class="g6-search-kart w3-btn w3-light-green w3-ripple">Søk</button>
+                    <button class="g6-search-kart g6-light-green">Søk</button>
                 </form>
             </div>
             
-            <div class="w3-threequarter g6-bg g6-margin-top">
+            <div class="w3-threequarter g6-bg">
                 <div id="googleMap" class="w3-margin" style=""></div>
             </div>
             

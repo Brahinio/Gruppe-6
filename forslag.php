@@ -211,7 +211,6 @@ $categories = Category::all();
                         <form action="./add_suggestion.php" method="post" id="addSuggestionForm">
 
                             <input type="text" name="title" placeholder="Tittel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tittel'" autocomplete="off" spellcheck="false" autocorrect="off" required>
-
                             <textarea name="description" placeholder="Beskrivelse" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivelse'" rows="3" form="addSuggestionForm"></textarea>
 
                             <select name="category" id="categories" required form="addSuggestionForm">
@@ -220,7 +219,7 @@ $categories = Category::all();
                                 <?php } ?>
                             </select>
 
-                            <button id="send" type="submit">Send</button>
+                            <button id="send" class="g6-light-green" type="submit">Send</button>
                         </form>
                     </section>
 

@@ -12,10 +12,10 @@
     
 <body>
     <div class="w3-row">
-        <div class="w3-content">
+        <div class="w3-content g6-padding">
             <div class="g6-center"><h1>Kart</h1></div>
 
-            <div class="w3-quarter w3-padding g6-bg">
+            <div class="w3-quarter g6-bg">
                 <form class="sok-kategorier">
                     <input class="sok-sted" type="text" name="sted" placeholder="Sted" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sted'" autocomplete="off" spellcheck="false" autocorrect="off" required>
                     <div class="checkboxes w3-left">

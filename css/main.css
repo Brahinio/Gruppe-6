@@ -102,6 +102,8 @@ button:hover, button:focus, input:focus, select:hover, textarea:focus {
 
 li {
     padding: 3px;
+    color: #777;
+    list-style-type: square;
 }
 
 /* JavaScript- hide elements by adding this class

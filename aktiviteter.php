@@ -3,10 +3,10 @@
 // Koble til databasen
 require __DIR__ . '/setup.php';
 
-$maxPerPage = 10;
+$maxPerPage = 5;
 
-$matbutikkerId = 2;
-$restauranterId = 3;
+$aktiviteterId = 4;
+$treningssenterId = 4;
 
 // Hent pris sortering fra url
 if(isset($_GET['price'])){
@@ -18,24 +18,37 @@ if (isset($_GET['category'])) {
     $categoryId = $_GET['category'];
 }
 
-// Hvis både pris og kategori id er satt og har riktige verdier
-if((isset($price) && $price > 0 && $price <=3) && (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId))) {
-    $articles = Article::where('price', $price)->where('category_id', $categoryId)->get()->take($maxPerPage);
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
 }
-// Hvis bare kategori id er satt og har riktig verdi
-else if (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId)) { 
-    $articles = Article::where('category_id', $categoryId)->get()->sortBy('price')->take($maxPerPage);
-}
-// Hvis bare pris er satt og har riktig verdi
-else if(isset($price) && $price > 0 && $price <= 3) {
-    $articles = Article::where('price', $price)->where('category_id', $matbutikkerId)->orWhere('price', $price)->Where('category_id', $restauranterId)->get()->take($maxPerPage);
+else $page = 1;
+
+
+$articles = new Article();
+if (isset($categoryId) && ($categoryId == $aktiviteterId || $categoryId == $treningssenterId)) {
+    $articles = $articles->where('category_id', $categoryId);
 }
 else {
-    $articles = Article::where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId)->get()->sortBy('price')->take($maxPerPage);
+    $articles = $articles->where('category_id', $aktiviteterId)->orWhere('category_id', $treningssenterId);
 }
 
+$maxPages = (count($articles->get()) % $maxPerPage == 0 ? (count($articles->get()) / $maxPerPage) : ((count($articles->get()) > $maxPerPage) ? (floor(count($articles->get()) / $maxPerPage)) + 1 : 1 ) );
+
+if (isset($price) && $price > 0 && $price <=3) {
+    $articles = $articles->where('price', $price);
+}
+else {
+    $articles = $articles->orderBy('price', 'asc');
+}
+// Get elements for your page, don't overextend, don't go to empty page
+if(count($articles->get()) > $maxPerPage * ($page-1)) $articles = $articles->skip($maxPerPage * ($page-1))->take($maxPerPage)->get();
+else if(count($articles->get()) % $maxPerPage != 0) $articles = $articles->skip(floor(count($articles->get()) / $maxPerPage) * $maxPerPage)->take($maxPerPage)->get();
+else if(floor(count($articles->get()) / $maxPerPage) == 0) $articles = $articles->take($maxPerPage)->get();
+else $articles = $articles->skip((floor(count($articles) / $maxPerPage) - 1) * $maxPerPage)->take($maxPerPage)->get();
+
+
 // Hent alle kategorier
-$categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranterId)->get()->take($maxPerPage);
+$categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssenterId)->get()->take($maxPerPage);
 
 ?>
 
@@ -47,7 +60,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Steder</title>
+    <title>Aktiviteter</title>
 </head>
     
     <?php require_once 'header.php'; ?>
@@ -56,11 +69,11 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
      
     <div class="w3-row">
         <div class="w3-content g6-padding">
-            <div class="g6-center"><h1>Steder</h1></div>
+            <div class="g6-center"><h1>Aktiviteter</h1></div>
             
             <div class="w3-bar">
             
-                <form action="./steder.php">
+                <form action="./aktiviteter.php">
                     <select class="w3-right w3-margin-right" name="category" onchange="this.form.submit()">
 
                         <option value="0">Alle</option>
@@ -84,6 +97,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
             </div>
 
             <!-- INNHOLD LAGES HER! -->  
+            <?= (count($articles) < 1) ? '<h1>Ingen artikler til dette søket!</h1>' : '' ?>
             <?php foreach($articles as $article) { ?>
             
                 <div class="w3-border-bottom w3-margin-top" style="display:inline-block; width:100%;">
@@ -120,6 +134,15 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                 </div>
             
             <?php } ?>
+            
+            <!-- Pagination -->
+            <div class="w3-bar g6-center g6-margin">
+                <a href="?page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
+                <?php for($i=0; $i < $maxPages; $i++) { ?>
+                    <a href="?<?= (isset($categoryId)) ? 'category=' . $categoryId . '&' : '' ?><?= (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : '' ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
+                <?php } ?>
+                <a href="?page=<?= ($page < $maxPages ? ($page + 1) : $maxPages) ?>" class="w3-button">»</a>
+            </div>
             
         </div>
     </div>

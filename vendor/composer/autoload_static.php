@@ -23,7 +23,6 @@ class ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
-            'Illuminate\\Pagination\\' => 22,
             'Illuminate\\Database\\' => 20,
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
@@ -51,10 +50,6 @@ class ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1
         array (
             0 => __DIR__ . '/..' . '/illuminate/support',
         ),
-        'Illuminate\\Pagination\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/pagination',
-        ),
         'Illuminate\\Database\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/database',
@@ -73,6 +68,10 @@ class ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/src',
+    );
+
     public static $prefixesPsr0 = array (
         'D' => 
         array (
@@ -88,6 +87,7 @@ class ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitf08cbb3b93243d40ca4d7017369d2cd1::$prefixesPsr0;
 
         }, null, ClassLoader::class);

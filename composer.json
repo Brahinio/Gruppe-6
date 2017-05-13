@@ -1,5 +1,0 @@
-{
-    "require": {
-        "illuminate/pagination": "^5.4"
-    }
-}

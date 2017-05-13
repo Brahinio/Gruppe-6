@@ -10,9 +10,9 @@ return array(
     'Symfony\\Polyfill\\Iconv\\' => array($vendorDir . '/symfony/polyfill-iconv'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Illuminate\\Support\\' => array($vendorDir . '/illuminate/support'),
-    'Illuminate\\Pagination\\' => array($vendorDir . '/illuminate/pagination'),
     'Illuminate\\Database\\' => array($vendorDir . '/illuminate/database'),
     'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    '' => array($baseDir . '/src'),
 );

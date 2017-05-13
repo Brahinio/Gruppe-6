@@ -213,11 +213,11 @@ li {
 }
 
 .g6-margin {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .g6-margin-top {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .g6-center {
@@ -231,6 +231,11 @@ li {
 
 .g6-light-green {
     background-color: #c0df97;
+}
+
+.ingress {
+    color: #505050;
+    margin-top: -15px;
 }
 
 /* Responsive design (filler of empty containers) */
@@ -281,11 +286,11 @@ li {
 }
 
 .g6-top {
-    margin-bottom: 40px !important;
+    margin-bottom: 20px !important;
 }
 
 .g6-no-header-space {
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 .g6-menu-style {
@@ -465,11 +470,11 @@ li {
     }
     
     .g6-margin {
-        margin-bottom: 30px !important;
+        margin-bottom: 20px !important;
     }
     
     .g6-margin-top {
-        margin-top: 30px !important;
+        margin-top: 20px !important;
     }
     
     .g6-threequarter-top, .g6-quarter-top {

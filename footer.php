@@ -6,7 +6,7 @@
             <div class="g6-cookies g6-padding">
                 <div class="w3-content w3-display-container g6-center">
                     <span onclick="this.parentElement.style.display='none'; setCookie('cAccepted', '1', '365');" class="w3-button w3-display-topright"><i class="fa fa-remove"></i></span>
-                    <h3>Denne nettsiden bruker cookies.</h3>
+                    <h3>Denne nettsiden bruker cookies</h3>
                     <p><a href="/cookies.php">Les mer om våre informasjonskapsler (cookies)</a></p>
                 </div>
             </div>

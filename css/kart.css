@@ -1,6 +1,6 @@
 .sok-kategorier {
     margin: 15px;
-    width: 100px;
+    width: 100%;
 }
 
 .g6-check, .g6-radio {
@@ -20,12 +20,7 @@
 }
 
 .g6-check {
-    margin-top: 14px;
-}
-
-.label-kategorier {
-    width: 45px;
-    float: right;
+    margin-top: 14.5px;
 }
 
 .g6-search-kart {
@@ -34,6 +29,7 @@
 
 .sok-sted {
     border-radius: 15px;
+    width: 90%;
 }
 
         #googleMap {

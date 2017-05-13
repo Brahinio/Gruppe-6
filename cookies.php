@@ -3,16 +3,16 @@
 <head>
     <title>Cookies</title>
 </head>
-<body>
     
     <?php require_once 'header.php'; ?>
     
+<body>
+
     <div class="w3-row">
         <section class="contentBlockIndex w3-content g6-padding">
             
-            <div><h1>Cookies</h1></div>
-            
-            <h3>Denne websiden bruker informasjonskapsler (cookies)</h3>
+            <h1 class="g6-color-blue">Cookies</h1>
+            <p class="ingress">Denne nettsiden bruker informasjonskapsler (cookies)</p>
 
             <p>De aller fleste nettsider i dag benytter seg av såkalte informasjonskapsler eller cookies for å bedre brukeropplevelsen. 
                 En cookie er en liten tekstfil som inneholder en rekke tegn som sendes til datamaskinen din når du besøker et nettsted. 

@@ -129,9 +129,9 @@
             <section class="feeds w3-row g6-margin-top">
                 <div class="w3-row g6-margin">
                     <div class="w3-half g6-content-padding extra-right-space">
-                        <h3>Det er mye interessant rundt campus- men det finnes<br>
-                            like mye fett på campus! Sjekk ut disse tilbudene:</h3>
-                        <ul class="campus-lenker">
+                        <h3 class="w3-threequarter">Det er mye interessant rundt campus- men det finnes
+                            like mye fett på campus! Sjekk ut disse:</h3>
+                        <ul class="campus-lenker w3-col">
                             <li><a href="https://www.facebook.com/SkjenkestuaStudentbar/?fref=ts" alt="Skjenkestua" target="_blank">Skjenkestua Studentbar</a></li>
                             <li><a href="https://www.facebook.com/westerdalsmakerspace/?fref=ts" alt="Makerspace" target="_blank">Westerdals Makerspace</a></li>
                             <li><a href="https://www.facebook.com/bibliowesterdalsosloact/?fref=ts" alt="Biblioteket" target="_blank">Biblioteket (låne retrokonsoller, anyone?)</a></li>

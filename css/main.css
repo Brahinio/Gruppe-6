@@ -85,6 +85,11 @@ a, button {
     cursor: pointer; 
 }
 
+a {
+    /* font-size: 0.95em; */
+    font-size: 1em;
+}
+
 /* Remove blue outline */
 input:focus, button:focus, select:focus, textarea:focus {
     outline: none;
@@ -129,6 +134,10 @@ li {
 .g6-bg-top {
     background-color: #55acee !important;
     /* background-color: #f1f1eb !important; */
+}
+
+.g6-color-blue {
+    color: #55acee !important;
 }
 
 .g6-zindex-top {
@@ -246,8 +255,8 @@ li {
 /****************************************************/
 
 /* Header section */
-#logo {
-    margin-top: 20px;
+.logo {
+    margin-top: 23px;
     
     font-size: 1.8em !important;
     color: #fff;

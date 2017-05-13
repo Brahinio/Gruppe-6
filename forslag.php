@@ -56,7 +56,7 @@ $categories = Category::all();
     <div class="w3-row">
         <div class="w3-content g6-padding">
             
-            <div class="g6-center"><h1>Forslag</h1></div>
+            <div class="g6-center"><h1 class="g6-color-blue">Forslag</h1></div>
             
             <div class="w3-threequarter">
                 <div id="containerSuggestions">
@@ -129,7 +129,7 @@ $categories = Category::all();
                                 if (checkCSS.style.visibility == 'hidden' || checkCSS.style.visibility == '') {
                                     checkCSS.style.visibility = 'visible';
                                     checkCSS.style.opacity = '1';
-                                    checkCSS.style.padding = '0px 0px 220px 0px';
+                                    checkCSS.style.margin = '0px 0px 220px 0px';
 
                                     // plusMinus.style.transform = 'rotate(90deg)';
                                     // plusMinus.style.background = '#e85c5c';
@@ -145,7 +145,7 @@ $categories = Category::all();
                                 } else {
                                     checkCSS.style.visibility = 'hidden';
                                     checkCSS.style.opacity = '0';
-                                    checkCSS.style.padding = '0px 0px 0px 0px';
+                                    checkCSS.style.margin = '0px 0px 0px 0px';
 
                                     // plusMinus.style.transform = 'rotate(0deg)';
                                     // plusMinus.style.background = '#228B22';
@@ -274,7 +274,7 @@ $categories = Category::all();
                             <h3><?= $suggestion->title ?></h3>
                             <p><?= $suggestion->description ?></p>
                             <div class="additionalData">
-                                <p><span>Lagt til:</span> 08/05/17 <span class="addSpace">Kategori:</span> Aktiviteter <span class="addSpace">Pris:</span> <i class="fa fa-dollar"></i></p>
+                                <p><span>Lagt til:</span> 08/05/17 <span class="addSpace">Kategori:</span> Aktiviteter</i></p>
                             </div>
                         </div>
                     </div>

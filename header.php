@@ -22,7 +22,7 @@
             <div class="w3-row g6-zindex-top">
                 <div class="g6-threequarter-top">
                     <div class="w3-half">
-                        <h3 id="logo"><a href="./" alt="forside">WeSup</a></h3>
+                        <h3 class="logo"><a href="./" alt="forside">WeSup</a></h3>
                         <p class="logo-ingress">studentenes anbefalinger</p>
                     </div>
 

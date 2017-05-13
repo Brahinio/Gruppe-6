@@ -29,19 +29,21 @@ $locations = Location::all();
             <div class="w3-quarter g6-bg">
                 <form class="sok-kategorier">
                     <input class="sok-sted" type="text" name="sted" placeholder="Sted" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sted'" autocomplete="off" spellcheck="false" autocorrect="off" required>
-                    <div class="checkboxes w3-left">
-                        <input class="g6-check" type="checkbox" name="store" onchange="checkboxToggle(this)">
-                        <input class="g6-check" type="checkbox" name="restaurant" onchange="checkboxToggle(this)">
-                        <input class="g6-check" type="checkbox" name="activity" onchange="checkboxToggle(this)">
-                        <input class="g6-check" type="checkbox" name="training" onchange="checkboxToggle(this)">
-                        <input class="g6-check" type="checkbox" name="school" onchange="checkboxToggle(this)" checked>
-                    </div>
-                    <div class="label-kategorier">
-                        <p>Matbutikker</p>
-                        <p>Restauranter</p>
-                        <p>Aktiviteter</p>
-                        <p>Treningssenter</p>
-                        <p>Skoler</p>
+                    <div class="w3-col">
+                        <div class="checkboxes w3-left">
+                            <input class="g6-check" type="checkbox" name="store" onchange="checkboxToggle(this)">
+                            <input class="g6-check" type="checkbox" name="restaurant" onchange="checkboxToggle(this)">
+                            <input class="g6-check" type="checkbox" name="activity" onchange="checkboxToggle(this)">
+                            <input class="g6-check" type="checkbox" name="training" onchange="checkboxToggle(this)">
+                            <input class="g6-check" type="checkbox" name="school" onchange="checkboxToggle(this)" checked>
+                        </div>
+                        <div class="label-kategorier">
+                            <p>Matbutikker</p>
+                            <p>Restauranter</p>
+                            <p>Aktiviteter</p>
+                            <p>Treningssenter</p>
+                            <p>Skoler</p>
+                        </div>
                     </div>
                     <button class="g6-search-kart g6-light-green">Søk</button>
                 </form>

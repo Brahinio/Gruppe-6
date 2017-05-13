@@ -10,32 +10,30 @@ if (isset($_GET['category'])) {
     $categoryId = $_GET['category'];
 }
 
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+}
+else $page = 1;
+
+$suggestions = new Suggestion()
 if (isset($categoryId) && $categoryId != 0) {
-    if(isset($_GET['sort'])) {
-        if($_GET['sort'] == 0) {
-            $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('date_added')->take($maxPerPage);
-        }
-        else {
-            $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('num_of_votes')->take($maxPerPage);
-        }
-    }
-    else {
-        $suggestions = Suggestion::where('category_id', $categoryId)->get()->sortByDesc('num_of_votes')->take($maxPerPage);
-    }
+    $suggestions = $suggestions->where('category_id', $categoryId);
+}
+
+$maxPages = (count($suggestions->get()) % $maxPerPage == 0 ? (count($suggestions->get()) / $maxPerPage) : ((count($suggestions->get()) > $maxPerPage) ? (floor(count($suggestions->get()) / $maxPerPage)) + 1 : 1 ) );
+
+if (isset($_GET['sort']) && $_GET['sort'] == 0) {
+    $suggestions = $suggestions->orderBy('date_added', 'desc');
 }
 else {
-    if(isset($_GET['sort'])) {
-        if($_GET['sort'] == 0) {
-            $suggestions = Suggestion::all()->sortByDesc('date_added')->take($maxPerPage);
-        }
-        else {
-            $suggestions = Suggestion::all()->sortByDesc('num_of_votes')->take($maxPerPage);
-        }
-    }
-    else {
-        $suggestions = Suggestion::all()->sortByDesc('num_of_votes')->take($maxPerPage);
-    }
+    $suggestions = $suggestions->orderBy('num_of_votes', 'desc');
 }
+// Get elements for your page, don't overextend, don't go to empty page
+if(count($suggestions->get()) > $maxPerPage * ($page-1)) $suggestions = $suggestions->skip($maxPerPage * ($page-1))->take($maxPerPage)->get();
+else if(count($suggestions->get()) % $maxPerPage != 0) $suggestions = $suggestions->skip(floor(count($suggestions->get()) / $maxPerPage) * $maxPerPage)->take($maxPerPage)->get();
+else if(floor(count($suggestions->get()) / $maxPerPage) == 0) $suggestions = $suggestions->take($maxPerPage)->get();
+else $suggestions = $suggestions->skip((floor(count($suggestions) / $maxPerPage) - 1) * $maxPerPage)->take($maxPerPage)->get();
+
 
 // Hent alle kategorier
 $categories = Category::all();
@@ -289,12 +287,11 @@ $categories = Category::all();
                 
                 <!-- Pagination -->
                 <div class="w3-bar g6-center g6-margin">
-                    <a href="#" class="w3-button">«</a>
-                    <a href="#" class="w3-button w3-green">1</a>
-                    <a href="#" class="w3-button">2</a>
-                    <a href="#" class="w3-button">3</a>
-                    <a href="#" class="w3-button">4</a>
-                    <a href="#" class="w3-button">»</a>
+                    <a href="?page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
+                    <?php for($i=0; $i < $maxPages; $i++) { ?>
+                        <a href="?<?= (isset($categoryId)) ? 'category=' . $categoryId . '&' : '' ?><?= (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : '' ?>page=<?php $p = ($page < 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : ''?>"><?= $p ?></a>
+                    <?php } ?>
+                    <a href="?page=<?= ($page < $maxPages ? ($page + 1) : $maxPages) ?>" class="w3-button">»</a>
                 </div>
                 
                 <!-- BEFORE PHP -->

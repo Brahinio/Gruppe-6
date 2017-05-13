@@ -15,7 +15,7 @@ if (isset($_GET['page'])) {
 }
 else $page = 1;
 
-$suggestions = new Suggestion()
+$suggestions = new Suggestion();
 if (isset($categoryId) && $categoryId != 0) {
     $suggestions = $suggestions->where('category_id', $categoryId);
 }

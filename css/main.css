@@ -60,6 +60,11 @@ p {
     color: #777;
 }
 
+label {
+    color: #777;
+    font-family: 'Roboto Condensed';
+}
+
 textarea {
     color: #000;
     text-align: center;
@@ -200,6 +205,10 @@ li {
 
 .g6-padding {
     padding: 1px 16px !important;
+}
+
+.g6-top-spacing {
+    margin-top: 20px;
 }
 
 .g6-padding-both {

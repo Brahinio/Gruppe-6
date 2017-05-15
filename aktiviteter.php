@@ -103,7 +103,7 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
             <?= (count($articles) < 1) ? '<h1>Ingen artikler til dette søket!</h1>' : '' ?>
             <?php foreach($articles as $article) { ?>
             
-                <div class="w3-border-bottom w3-margin-top" style="display:inline-block; width:100%;">
+                <div class="w3-border-bottom w3-margin-top g6-margin" style="display:inline-block; width:100%;">
 
                     <div class="w3-left w3-twothird" style="height:100%;"> 
 

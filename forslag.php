@@ -54,9 +54,7 @@ $categories = Category::all();
     <div class="w3-row">
         <div class="w3-content g6-padding">
             
-            <div class="g6-center"><h1 class="g6-color-blue">Forslag</h1>
-                <p class="ingress">Her kan du sende inn forslag og stemme fram dine anbefalinger!</p>
-            </div>
+            <div class="g6-center"><h1 class="g6-color-blue">Forslag</h1></div>
             
             <div class="w3-threequarter">
                 <div id="containerSuggestions">
@@ -289,11 +287,12 @@ $categories = Category::all();
                 
                 <!-- Pagination -->
                 <div class="w3-bar g6-center g6-margin">
-                    <a href="?page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
+                    <?php $c = (isset($categoryId)) ? 'category=' . $categoryId . '&' : ''; $s = (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : '' ?>
+                    <a href="?<?= $c ?><?= $s ?>page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
                     <?php for($i=0; $i < $maxPages; $i++) { ?>
-                        <a href="?<?= (isset($categoryId)) ? 'category=' . $categoryId . '&' : '' ?><?= (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : '' ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
+                        <a href="?<?= $c ?><?= $s ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
                     <?php } ?>
-                    <a href="?page=<?= ($page < $maxPages ? ($page + 1) : $maxPages) ?>" class="w3-button">»</a>
+                    <a href="?<?= $c ?><?= $s ?>page=<?= ($page < $maxPages ? ($page + 1) : ($maxPages > 0 ? $maxPages : 1) ) ?>" class="w3-button">»</a>
                 </div>
                 
                 <!-- BEFORE PHP -->

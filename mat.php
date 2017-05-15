@@ -139,11 +139,12 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
             
             <!-- Pagination -->
             <div class="w3-bar g6-center g6-margin">
-                <a href="?page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
+                <?php $c = (isset($categoryId)) ? 'category=' . $categoryId . '&' : ''; $s = (isset($price)) ? 'price=' . $price . '&' : '' ?>
+                <a href="?<?= $c ?><?= $s ?>page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
                 <?php for($i=0; $i < $maxPages; $i++) { ?>
-                    <a href="?<?= (isset($categoryId)) ? 'category=' . $categoryId . '&' : '' ?><?= (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : '' ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
+                    <a href="?<?= $c ?><?= $s ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
                 <?php } ?>
-                <a href="?page=<?= ($page < $maxPages ? ($page + 1) : $maxPages) ?>" class="w3-button">»</a>
+                <a href="?<?= $c ?><?= $s ?>page=<?= ($page < $maxPages ? ($page + 1) : ($maxPages > 0 ? $maxPages : 1) ) ?>" class="w3-button">»</a>
             </div>
             
         </div>

@@ -5,6 +5,8 @@ require __DIR__ . '/setup.php';
 
 $maxPerPage = 10;
 
+$suggestions = new Suggestion();
+
 // Hent kategori id fra url
 if (isset($_GET['category'])) {
     $categoryId = $_GET['category'];
@@ -15,9 +17,14 @@ if (isset($_GET['page'])) {
 }
 else $page = 1;
 
-$suggestions = new Suggestion();
-if (isset($categoryId) && $categoryId != 0) {
-    $suggestions = $suggestions->where('category_id', $categoryId);
+if(isset($_GET['search'])) {
+    $search = $_GET['search'];
+    $suggestions = $suggestions->where('title', 'LIKE', '%'.$search.'%')->orWhere('description', 'LIKE', '%'.$search.'%');
+}
+else {
+    if (isset($categoryId) && $categoryId != 0) {
+        $suggestions = $suggestions->where('category_id', $categoryId);
+    }
 }
 
 $maxPages = (count($suggestions->get()) % $maxPerPage == 0 ? (count($suggestions->get()) / $maxPerPage) : ((count($suggestions->get()) > $maxPerPage) ? (floor(count($suggestions->get()) / $maxPerPage)) + 1 : 1 ) );
@@ -33,7 +40,6 @@ if(count($suggestions->get()) > $maxPerPage * ($page-1)) $suggestions = $suggest
 else if(count($suggestions->get()) % $maxPerPage != 0) $suggestions = $suggestions->skip(floor(count($suggestions->get()) / $maxPerPage) * $maxPerPage)->take($maxPerPage)->get();
 else if(floor(count($suggestions->get()) / $maxPerPage) == 0) $suggestions = $suggestions->take($maxPerPage)->get();
 else $suggestions = $suggestions->skip((floor(count($suggestions) / $maxPerPage) - 1) * $maxPerPage)->take($maxPerPage)->get();
-
 
 // Hent alle kategorier
 $categories = Category::all();
@@ -247,6 +253,9 @@ $categories = Category::all();
                         <?php } ?>
                         <button id="nyeste" name="sort" value="0" type="submit">Nyeste</button>
                         <button id="topprangert" name="sort" value="1" type="submit">Topprangert</button>
+                        <?php if(isset($search)) { ?>
+                            <input value="<?= $search ?>" name="search" type="hidden"/>
+                        <?php } ?>
                     </form>
 
                     <!--
@@ -272,7 +281,7 @@ $categories = Category::all();
                             <h3><?= $suggestion->title ?></h3>
                             <p><?= $suggestion->description ?></p>
                             <div class="additionalData">
-                                <p><span>Lagt til:</span> 08/05/17 <span class="addSpace">Kategori:</span> Aktiviteter</i></p>
+                                <p><span>Lagt til:</span> <?= $suggestion->date_added->diffForHumans() ?> <span class="addSpace">Kategori:</span> <?= $suggestion->category->category_name ?></p>
                             </div>
                         </div>
                     </div>
@@ -287,12 +296,12 @@ $categories = Category::all();
                 
                 <!-- Pagination -->
                 <div class="w3-bar g6-center g6-margin">
-                    <?php $c = (isset($categoryId)) ? 'category=' . $categoryId . '&' : ''; $s = (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : '' ?>
-                    <a href="?<?= $c ?><?= $s ?>page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
+                    <?php $c = (isset($categoryId)) ? 'category=' . $categoryId . '&' : ''; $a = (isset($_GET['sort'])) ? 'sort=' . $_GET['sort'] . '&' : ''; $s = (isset($search)) ? 'search=' . $search . '&' : '' ?>
+                    <a href="?<?= $c ?><?= $a ?><?= $s ?>page=<?= ($page > 1 ? ($page - 1) : 1) ?>" class="w3-button">«</a>
                     <?php for($i=0; $i < $maxPages; $i++) { ?>
-                        <a href="?<?= $c ?><?= $s ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
+                        <a href="?<?= $c ?><?= $a ?><?= $s ?>page=<?php $p = ($page <= 3 || $page > 3 && $maxPages <=5) ? $i+1 : (($page + 2 <= $maxPages) ? $page - 2 : ($maxPages - 4 + $i) ); echo $p ?>" class="w3-button<?= ($p == $page) ? ' w3-green' : (($page > $maxPages && $p == $maxPages) ? ' w3-green' : '')?>"><?= $p ?></a>
                     <?php } ?>
-                    <a href="?<?= $c ?><?= $s ?>page=<?= ($page < $maxPages ? ($page + 1) : ($maxPages > 0 ? $maxPages : 1) ) ?>" class="w3-button">»</a>
+                    <a href="?<?= $c ?><?= $a ?><?= $s ?>page=<?= ($page < $maxPages ? ($page + 1) : ($maxPages > 0 ? $maxPages : 1) ) ?>" class="w3-button">»</a>
                 </div>
                 
                 <!-- BEFORE PHP -->

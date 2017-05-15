@@ -61,21 +61,34 @@ $categories = Category::all();
             <div class="w3-threequarter">
                 <div id="containerSuggestions">
                     <section id="search">
-                        <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only"></span></label>
-
+                        
                         <input id="search-input" placeholder="Søk..." onfocus="this.placeholder = ''" 
                                onblur="this.placeholder = 'Søk...'" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
-
+                        <a id="search-go" type="submit" class="fa fa-search" aria-hidden="true"><span class="sr-only"></span></a>
                         <a id="search-clear" type="submit" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only"></span></a>
 
                         <!-- Empty search field on clicking red cross and maintain focus -->
                         <script>
-                            var text = document.getElementById('search-input');
-                            var button = document.getElementById('search-clear');
-                            button.onclick = function() {
-                                text.value = '';
-                                text.focus();
+                            var search = document.getElementById('search-input');
+                            var buttonGo = document.getElementById('search-go');
+                            var buttonClear = document.getElementById('search-clear');
+                        
+                            buttonGo.onclick = function() {
+                                search.value = 'test';
                             }
+                            
+                            buttonClear.onclick = function() {
+                                search.value = '';
+                                search.focus();
+                            }
+                            
+                            /* search on button up enter */
+                            search.addEventListener("keyup", function(event) {
+                                event.preventDefault();
+                                if (event.keyCode == 13) {
+                                    document.getElementById("search-go").click();
+                                }
+                            });
                         </script>
 
         <!-- Finding the best solution to hide content (kept for testing and assurement)

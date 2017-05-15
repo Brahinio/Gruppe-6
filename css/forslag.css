@@ -40,14 +40,26 @@
         #search #search-clear {
             text-decoration: none;
             position: relative;
-            top: -31px;
-            left: 88%;
+            top: -31.5px;
+            left: 84%;
             color: #b3b3b3;
             font-size: inherit;
         }
 
         #search #search-clear:hover {
             color: #e85c5c;
+        }
+
+        #search #search-go {
+            text-decoration: none;
+            position: relative;
+            top: -32px;
+            left: 5%;
+            font-size: inherit;
+        }
+
+        #search #search-go:hover {
+            color: #228B22;
         }
 
         .fa-search:before {
@@ -63,7 +75,7 @@
             font-size: 0.9em;
             color: #666;
             border: none;
-            left: -15px;
+            left: -35px;
         }
 
 /*

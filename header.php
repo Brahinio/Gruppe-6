@@ -83,6 +83,7 @@
                             <a href="./aktiviteter.php" class="g6-menu-style w3-bar-item w3-button">Aktiviteter</a>
                             <a href="./kart.php" class="g6-menu-style w3-bar-item w3-button">Kart</a>
                             <a href="./forslag.php" class="g6-menu-style w3-bar-item w3-button">Forslag</a>
+                            <a href="./kontakt.php" class="g6-menu-style w3-bar-item w3-button">Kontakt</a>
                         </div>
                     </div>
                 </div>

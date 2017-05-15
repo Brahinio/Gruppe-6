@@ -78,7 +78,7 @@ $categories = Category::all();
                             var buttonClear = document.getElementById('search-clear');
                         
                             buttonGo.onclick = function() {
-                                search.value = 'test';
+                                // Kode som skal kjøres
                             }
                             
                             buttonClear.onclick = function() {

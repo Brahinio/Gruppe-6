@@ -68,8 +68,7 @@ $categories = Category::all();
                 <div id="containerSuggestions">
                     <section id="search">
                         
-                        <input id="search-input" placeholder="Søk..." onfocus="this.placeholder = ''" 
-                               onblur="this.placeholder = 'Søk...'" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+                        <input id="search-input" placeholder="Søk..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Søk...'" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
                         <a id="search-go" type="submit" class="fa fa-search" aria-hidden="true"><span class="sr-only"></span></a>
                         <a id="search-clear" type="submit" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only"></span></a>
 
@@ -80,7 +79,7 @@ $categories = Category::all();
                             var buttonClear = document.getElementById('search-clear');
                         
                             buttonGo.onclick = function() {
-                                // Kode som skal kjøres
+                                window.location.href = "?search=" + search.value;
                             }
                             
                             buttonClear.onclick = function() {

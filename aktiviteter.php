@@ -79,7 +79,7 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
                 <form action="./aktiviteter.php">
                     <select class="w3-right w3-margin-right" name="category" onchange="this.form.submit()">
 
-                        <option value="0">Alle</option>
+                        <option value="0">Alle kategorier</option>
                         <?php foreach($categories as $category) { ?>
                             <option value="<?= $category->id ?>" <?= (isset($categoryId) && $categoryId == $category->id) ? 'selected' : '' ?>><?= $category->category_name ?></option>
                         <?php } ?>

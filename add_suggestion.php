@@ -10,7 +10,7 @@ if(isset($_POST['title']) && isset($_POST['category']))
     $suggestion->category_id = $_POST['category'];
     $suggestion->save();
     
-    header("Location: http://localhost:80/forslag.php?category=" . $_POST['category'] . "&sort=0");
+    header("Location: http://tek.westerdals.no/~telmat15/Gruppe-6/forslag.php?category=" . $_POST['category'] . "&sort=0");
     //header("Location: http://tek.westerdals.no/~telmat15/Gruppe-6/forslag.php?category=" . $_POST['category'] . "&sort=0");
 }
 else {

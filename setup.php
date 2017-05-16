@@ -9,6 +9,7 @@ use Illuminate\Database\Capsule\Manager as Database;
 
 // Vi kaller en statisk metode på Carbon klassen for å sette språket på tid og dato til norsk.
 Carbon::setLocale('no');
+date_default_timezone_set('Europe/Oslo');
 
 // Vi setter opp en ny databasetilkobling.
 $database = new Database();

@@ -7,7 +7,7 @@
     <meta name="Webprosjekt" content="">
     <meta name="Gruppe 6" content="">
     
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="css/w3.css">
     
     <link rel="icon" type="image/png" href="img/favicon.ico">

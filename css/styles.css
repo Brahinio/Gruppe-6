@@ -13,7 +13,7 @@
 }
 
 html {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     
     /* For footer bottom filling- gets crazy when responsive */
     /* background-color: #f1f1eb; */
@@ -459,6 +459,25 @@ li {
 
 .g6-footer-content {
     margin-top: 50px !important;
+}
+
+.copyright {
+    position: relative;
+    bottom: -75px;
+}
+
+/****************************************************/
+/****************************************************/
+/**/
+/**/
+/*                  kontakt css                     */
+/**/
+/**/
+/****************************************************/
+/****************************************************/
+
+#beskjed {
+    text-align: left;
 }
 
 /****************************************************/

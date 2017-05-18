@@ -14,7 +14,7 @@
             <h1 class="g6-color-blue">Kontakt</h1>
             <p class="ingress">Vi hører gjerne på konstruktiv kritikk- og dine forslag til forbedringer av tjenesten!</p>
 
-            <form id="kontaktskjema" action="#" method="POST" enctype="multipart/form-data">
+            <form id="kontaktskjema" action="=mailto:kontakt@gruppe-6.no" method="POST" enctype="multipart/form-data">
                 <div class="w3-row">
                     <label for="navn">Ditt navn:</label><br />
                     <input id="navn" class="input" name="navn" type="text" value="" size="30" /><br />

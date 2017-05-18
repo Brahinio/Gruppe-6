@@ -27,8 +27,7 @@ $locations = Location::all();
             </div>
 
             <div class="w3-quarter g6-bg">
-                <form class="sok-kategorier">
-                    <input class="sok-sted" type="text" name="sted" placeholder="Sted" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sted'" autocomplete="off" spellcheck="false" autocorrect="off" required>
+                <div class="sok-kategorier">
                     <div class="w3-col">
                         <div class="checkboxes w3-left">
                             <input class="g6-check" type="checkbox" name="store" onchange="checkboxToggle(this)">
@@ -45,12 +44,12 @@ $locations = Location::all();
                             <p>Skoler</p>
                         </div>
                     </div>
-                    <button class="g6-search-kart g6-light-green">Søk</button>
-                </form>
+                    <button class="g6-search-kart g6-light-green" onclick="recenterMap()">Sentrer kart</button>
+                </div>
             </div>
             
-            <div class="w3-threequarter g6-bg">
-                <div id="googleMap" class="w3-margin" style=""></div>
+            <div class="w3-threequarter">
+                <div id="googleMap"></div>
             </div>
             
             <script type="text/javascript">
@@ -60,6 +59,7 @@ $locations = Location::all();
                 var markers = [];
                 var icons;
                 var map;
+                var mapProp;
                 
                 function initVars() {
                     icons = {
@@ -102,7 +102,7 @@ $locations = Location::all();
                 function initMap() {
                     initVars();
                     
-                    var mapProp = {
+                    mapProp = {
                         center: new google.maps.LatLng(59.920119, 10.755048),
                         zoom: 15,
                         styles: [
@@ -123,6 +123,11 @@ $locations = Location::all();
                         if(marker.icon.url == icon.url) marker.setMap(value);
                     });
                     
+                }
+                
+                function recenterMap() {
+                    map.setCenter(mapProp.center);
+                    map.setZoom(mapProp.zoom);
                 }
                 
                 function checkboxToggle(element) {

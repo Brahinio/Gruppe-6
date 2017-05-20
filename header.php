@@ -79,11 +79,11 @@
                         </button>
                         <div id="menuMain" class="g6-menu g6-bg g6-shadow-2 w3-dropdown-content w3-bar-block">
                             <a href="./" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Forside</a>
-                            <a href="./mat.php" class="g6-menu-style w3-bar-item w3-button">Mat</a>
-                            <a href="./aktiviteter.php" class="g6-menu-style w3-bar-item w3-button">Aktiviteter</a>
-                            <a href="./kart.php" class="g6-menu-style w3-bar-item w3-button">Kart</a>
-                            <a href="./forslag.php" class="g6-menu-style w3-bar-item w3-button">Forslag</a>
-                            <a href="./kontakt.php" class="g6-menu-style w3-bar-item w3-button">Kontakt</a>
+                            <a href="./mat.php" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-apple fa-fw" aria-hidden="true"></i>&nbsp; Mat</a>
+                            <a href="./aktiviteter.php" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-cube fa-fw" aria-hidden="true"></i>&nbsp; Aktiviteter</a>
+                            <a href="./kart.php" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>&nbsp; Kart</a>
+                            <a href="./forslag.php" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>&nbsp; Forslag</a>
+                            <a href="./kontakt.php" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp; Kontakt</a>
                         </div>
                     </div>
                 </div>

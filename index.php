@@ -113,15 +113,15 @@
 
             <section class="infoboxes w3-row g6-center g6-margin g6-border-bottom">
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-2">ikon/knapp</h4>
+                    <h4 class="w3-card-2">Mat</h4>
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
                 </div>
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-2"><i class="fa fa-beer" aria-hidden="true"></i></h4>
+                    <h4 class="w3-card-2">Aktiviteter</h4>
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
                 </div>
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-2"><i class="fa fa-map-marker" aria-hidden="true"></i></h4>
+                    <h4 class="w3-card-2">Kart</h4>
                     <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
                 </div>
             </section>

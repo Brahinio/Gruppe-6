@@ -131,6 +131,10 @@ li {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.fa-fw {
+    color: #667580;
+}
+
 /* Gruppe 6 standards */
 .g6-bg {
     background-color: #f1f1eb !important;
@@ -299,7 +303,7 @@ li {
 }
 
 .g6-no-header-space {
-    margin-top: -20px;
+    margin-top: -28px;
 }
 
 .g6-menu-style {
@@ -454,7 +458,7 @@ li {
 }
 
 .g6-footer {
-    height: 300px !important;
+    height: 310px !important;
 }
 
 .g6-footer-content {

@@ -23,7 +23,8 @@
 
                 <p class="g6-text-left g6-blued-out-text">kontakt oss:</p>
                 
-                <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt">kontakt@gruppe-6.no</a></p>
+                <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp; kontakt@gruppe-6.no</a></p>
+                <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp; 666 66 666</a></p>
                    
                     
                 <div class="copyright">

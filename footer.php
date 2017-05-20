@@ -21,11 +21,14 @@
                 <h3>Send inn dine beste <a href="./forslag.php" alt="forslag">forslag</a> <i class="fa fa-heart w3-text-red" aria-hidden="true"></i> og del dine kuleste opplevelser med #westerdals 
                     <i class="fa fa-hand-o-left w3-text-green" aria-hidden="true"></i></h3>
 
-                <p class="g6-text-left g6-blued-out-text">kontakt oss:</p>
-                
-                <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp; kontakt@gruppe-6.no</a></p>
-                <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp; 666 66 666</a></p>
-                   
+                <div class="w3-row">
+                    <div class="w3-full">
+                        <p class="g6-text-left g6-blued-out-text">kontakt oss:</p>
+
+                        <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp; kontakt@gruppe-6.no</a></p>
+                        <p class="g6-text-left"><a href="./kontakt.php" alt="kontakt"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp; 66 66 66 66</a></p>
+                    </div>
+                </div>
                     
                 <div class="copyright">
                     <p><a href="./kontakt.php" alt="kontakt"><span class="w3-left g6-greyed-out-text">GRUPPE-6 © 2017</span></a></p>

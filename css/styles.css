@@ -457,12 +457,9 @@ li {
     z-index: 1001;
 }
 
-.g6-footer {
-    height: 310px !important;
-}
-
 .g6-footer-content {
-    margin-top: 50px !important;
+    margin-top: 40px !important;
+    padding-bottom: 40px !important;
 }
 
 .copyright {

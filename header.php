@@ -78,7 +78,7 @@
                             </span>
                         </button>
                         <div id="menuMain" class="g6-menu g6-bg g6-shadow-2 w3-dropdown-content w3-bar-block">
-                            <a href="./" class="g6-menu-style w3-bar-item w3-button">Forside</a>
+                            <a href="./" class="g6-menu-style w3-bar-item w3-button"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Forside</a>
                             <a href="./mat.php" class="g6-menu-style w3-bar-item w3-button">Mat</a>
                             <a href="./aktiviteter.php" class="g6-menu-style w3-bar-item w3-button">Aktiviteter</a>
                             <a href="./kart.php" class="g6-menu-style w3-bar-item w3-button">Kart</a>

@@ -23,7 +23,7 @@ $locations = Location::all();
         <div class="w3-content g6-padding">
             
             <div class="g6-center"><h1 class="g6-color-blue">Kart</h1>
-                <p class="ingress">Her får du en kartoversikt over anbefalte steder!</p>
+                <p class="ingress">Her får du en kartoversikt over anbefalte steder</p>
             </div>
 
             <div class="w3-quarter g6-bg">

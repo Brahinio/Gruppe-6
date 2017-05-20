@@ -463,7 +463,20 @@ li {
 
 .copyright {
     position: relative;
-    bottom: -75px;
+    margin-top: 30px;
+    font-size: 0.8em;
+}
+
+.g6-greyed-out-text {
+    color: #b3b3b3;
+}
+
+.g6-blued-out-text {
+    color: #0091ff;
+}
+
+.g6-text-left {
+    text-align: left !important;
 }
 
 /****************************************************/

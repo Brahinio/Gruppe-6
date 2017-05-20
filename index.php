@@ -11,7 +11,7 @@
     
     <div class="w3-row g6-no-header-space">
 
-        <section class="image-slider w3-row g6-margin">
+        <section class="image-slider w3-row g6-margin w3-content w3-padding">
             <div class="w3-display-container">
                 <div class="w3-display-container mySlides">
                     <img src="img/img_fjords_wide.jpg" style="width:100%">
@@ -138,7 +138,7 @@
                             <li><a href="https://www.westerdals.no/artikkel/greenscreenrom/" alt="VR og green room" target="_blank">VR og green room på Brenneriveien</a></li>
                             <li><a href="https://www.facebook.com/westerdalsrevyen/?fref=ts" alt="Revyen" target="_blank">Westerdalsrevyen</a></li>
                             <li><a href="https://www.facebook.com/groups/nith.ksb/?ref=br_rs" alt="kjop, salg, bytte" target="_blank">Kjøp, salg, bytte (Westerdals)</a></li>
-                            <li><a href="https://www.facebook.com/groups/327516017350960/" alt="fotball" target="_blank">Westerdals Fotball..... As if.</a></li>
+                            <li><a href="https://www.facebook.com/groups/327516017350960/" alt="fotball" target="_blank">Westerdals Fotball</a></li>
                             <li><a href="https://www.westerdals.no/foreninger/" alt="Foreninger" target="_blank">Eller kanskje du vil starte egen forening?</a></li>
                         </ul>
                     </div>

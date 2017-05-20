@@ -61,7 +61,7 @@ $categories = Category::all();
         <div class="w3-content g6-padding">
             
             <div class="g6-center"><h1 class="g6-color-blue">Forslag</h1>
-                <p class="ingress">Her kan du sende inn forslag og stemme fram dine anbefalinger!</p>
+                <p class="ingress">Her kan du sende inn forslag og stemme fram dine anbefalinger</p>
             </div>
             
             <div class="w3-threequarter">

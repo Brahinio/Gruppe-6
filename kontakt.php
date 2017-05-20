@@ -12,7 +12,7 @@
         <section class="contentBlockIndex w3-content g6-padding">
             
             <h1 class="g6-color-blue">Kontakt</h1>
-            <p class="ingress">Vi hører gjerne på konstruktiv kritikk- og dine forslag til forbedringer av tjenesten!</p>
+            <p class="ingress">Vi hører gjerne på konstruktiv kritikk</p>
 
             <form id="kontaktskjema" action="=mailto:kontakt@gruppe-6.no" method="POST" enctype="multipart/form-data">
                 <div class="w3-row">

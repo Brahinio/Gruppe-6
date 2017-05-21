@@ -1,3 +1,11 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/forslag.css">
+    <title>Forslag</title>
+
+<?php require_once 'header.php'; ?>
+
 <?php
 
 // Koble til databasen
@@ -45,13 +53,6 @@ else $suggestions = $suggestions->skip((floor(count($suggestions) / $maxPerPage)
 $categories = Category::all();
 
 ?>
-<!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/forslag.css">
-    <title>Forslag</title>
-
-    <?php require_once 'header.php'; ?>
     
     <div class="w3-row">
         <div class="w3-content g6-padding">
@@ -288,8 +289,8 @@ $categories = Category::all();
                             </div>
                         </div>
                         <div class="text g6-threequarter">
-                            <h3><?= $suggestion->title ?></h3>
-                            <p><?= $suggestion->description ?></p>
+                            <h3><?= htmlspecialchars($suggestion->title) ?></h3>
+                            <p><?= htmlspecialchars($suggestion->description) ?></p>
                             <div class="additionalData">
                                 <p><span>Lagt til:</span> <?= $suggestion->date_added->diffForHumans() ?> <span class="addSpace">Kategori:</span> <?= $suggestion->category->category_name ?></p>
                             </div>

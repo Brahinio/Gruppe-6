@@ -105,29 +105,10 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
 
                         <img class="w3-padding" src="<?= $article->image_url ?>" alt="bilde" style="width:100%;">
                         
-<<<<<<< Updated upstream
                         <h3 class="w3-margin-left"><?= $article->title ?></h3>
                         <p class="w3-margin-left"><?= $article->description ?></p>
                         
-                        <br>
                         <span class="w3-margin-left">Pris: <?php for($i=0; $i < $article->price; $i++) { ?><i class="fa fa-dollar"></i><?php } ?></span>
-=======
-<<<<<<< Updated upstream
-                        <h3 class="w3-padding-left"><?= $article->title ?></h3>
-                        <p class="w3-padding-left"><?= $article->description ?></p>
-                        
-                        <p>Pris: <i class="fa fa-dollar"></i>
-                            <i class="fa fa-dollar"></i></p>
-=======
-                        <h3><?= $article->title ?></h3>
-                        <p><?= $article->description ?></p>
-                        
-                        Pris: <i class="fa fa-dollar"></i>
-                              <i class="fa fa-dollar"></i>
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-                        
-                        <br><br>
                           
                     </div>
                    

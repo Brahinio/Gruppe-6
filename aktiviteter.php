@@ -1,15 +1,3 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Aktiviteter</title>
-
-<?php require_once 'header.php'; ?>
-
 <?php
 
 // Koble til databasen
@@ -63,6 +51,17 @@ else $articles = $articles->skip((floor(count($articles) / $maxPerPage) - 1) * $
 $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssenterId)->get();
 
 ?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Aktiviteter</title>
+
+    <?php require_once 'header.php'; ?>
      
     <div class="w3-row">
         <div class="w3-content g6-padding">

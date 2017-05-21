@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>WeSup</title>
 
-<?php require_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
     
     <div class="w3-row g6-no-header-space">
 

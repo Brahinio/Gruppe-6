@@ -1,11 +1,3 @@
-<!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/forslag.css">
-    <title>Forslag</title>
-
-<?php require_once 'header.php'; ?>
-
 <?php
 
 // Koble til databasen
@@ -53,6 +45,13 @@ else $suggestions = $suggestions->skip((floor(count($suggestions) / $maxPerPage)
 $categories = Category::all();
 
 ?>
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/forslag.css">
+    <title>Forslag</title>
+
+    <?php require_once 'header.php'; ?>
     
     <div class="w3-row">
         <div class="w3-content g6-padding">

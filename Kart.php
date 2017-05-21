@@ -1,3 +1,10 @@
+<?php
+
+require __DIR__ . '/setup.php';
+
+$locations = Location::all();
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -7,15 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<?php require "header.php"; ?>
-
-<?php
-
-require __DIR__ . '/setup.php';
-
-$locations = Location::all();
-
-?>
+    <?php require "header.php"; ?>
 
     <div class="w3-row">
         <div class="w3-content g6-padding">

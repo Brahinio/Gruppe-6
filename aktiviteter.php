@@ -149,7 +149,4 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
         </div>
     </div>
      
-    <?php require_once 'footer.php'; ?>
-
-</body>
-</html>
+<?php require_once 'footer.php'; ?>

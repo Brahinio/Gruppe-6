@@ -1,10 +1,8 @@
-<?php require_once 'header.php'; ?>
-
+<!doctype html>
 <head>
     <title>Kontakt</title>
-</head>
-    
-<body>
+
+<?php require_once 'header.php'; ?>
 
     <div class="w3-row">
         <section class="contentBlockIndex w3-content g6-padding">
@@ -28,7 +26,6 @@
                 <button id="send" class="g6-light-green g6-top-spacing" type="submit">Send</button>
             </form>	
         </section>
-        
     </div>
     
 <?php require_once 'footer.php'; ?>

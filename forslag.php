@@ -1,3 +1,8 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/forslag.css">
+    <title>Forslag</title>
+
 <?php require_once 'header.php'; ?>
 
 <?php
@@ -47,13 +52,6 @@ else $suggestions = $suggestions->skip((floor(count($suggestions) / $maxPerPage)
 $categories = Category::all();
 
 ?>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="css/forslag.css">
-    <title>Forslag</title>
-</head>
-
-<body>
     
     <div class="w3-row">
         <div class="w3-content g6-padding">

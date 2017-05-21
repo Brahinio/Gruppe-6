@@ -1,3 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Mat</title>
+
+<?php require_once 'header.php'; ?>
+
 <?php
 
 // Koble til databasen
@@ -51,18 +63,7 @@ else $articles = $articles->skip((floor(count($articles) / $maxPerPage) - 1) * $
 $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranterId)->get()->take($maxPerPage);
 
 ?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Mat</title>
-
-    <?php require_once 'header.php'; ?>
-    
+     
     <div class="w3-row">
         <div class="w3-content g6-padding">
             
@@ -108,6 +109,7 @@ $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranter
                         <h3 class="w3-margin-left"><?= $article->title ?></h3>
                         <p class="w3-margin-left"><?= $article->description ?></p>
                         
+                        <br>
                         <span class="w3-margin-left">Pris: <?php for($i=0; $i < $article->price; $i++) { ?><i class="fa fa-dollar"></i><?php } ?></span>
                           
                     </div>

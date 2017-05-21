@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
+<?php require_once 'header.php'; ?>
+
 <head>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>WeSup</title>
 </head>
-
-    <?php require_once 'header.php'; ?>
 
 <body>
     

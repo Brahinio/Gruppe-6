@@ -8,7 +8,7 @@
     <meta name="Gruppe 6" content="">
     
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
     
     <link rel="icon" type="image/png" href="img/favicon.ico">
     
@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
 </head>
-
+<body>
     <div class="w3-row g6-bg-top g6-top g6-zindex-top g6-shadow">
         <div class="w3-content g6-full-width g6-zindex-top g6-padding">
             <div class="w3-row g6-zindex-top">
@@ -90,4 +90,4 @@
             </div>
         </div>
     </div>
-</html>
+</body>

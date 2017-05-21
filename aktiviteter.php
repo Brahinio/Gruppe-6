@@ -1,3 +1,5 @@
+<?php require_once 'header.php'; ?>
+
 <?php
 
 // Koble til databasen
@@ -52,8 +54,6 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
 
 ?>
 
-<!DOCTYPE html>
-<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,8 +62,6 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
     <meta name="author" content="">
     <title>Aktiviteter</title>
 </head>
-    
-    <?php require_once 'header.php'; ?>
     
 <body>
      
@@ -155,4 +153,3 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
 
 </body>
 </html>
-

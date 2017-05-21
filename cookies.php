@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
+<?php require_once 'header.php'; ?>
+
 <head>
     <title>Cookies</title>
 </head>
     
-    <?php require_once 'header.php'; ?>
-    
 <body>
-
     <div class="w3-row">
         <section class="contentBlockIndex w3-content g6-padding">
             

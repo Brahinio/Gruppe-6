@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
+<?php require_once 'header.php'; ?>
+
 <head>
     <title>Kontakt</title>
 </head>
-    
-    <?php require_once 'header.php'; ?>
     
 <body>
 

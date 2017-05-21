@@ -1,3 +1,5 @@
+<?php require "header.php"; ?>
+
 <?php
 
 require __DIR__ . '/setup.php';
@@ -6,8 +8,6 @@ $locations = Location::all();
 
 ?>
 
-<!DOCTYPE html>
-<html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/kart.css">
 	<title>Kart</title>
@@ -15,8 +15,6 @@ $locations = Location::all();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-    
-    <?php require "header.php"; ?>
     
 <body>
     <div class="w3-row">

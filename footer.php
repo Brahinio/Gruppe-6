@@ -1,5 +1,3 @@
-<html>
-    
     <!-- Cookies -->
     <?php if(!isset($_COOKIE['cAccepted'])) { ?>
         <div class="w3-row">
@@ -37,4 +35,3 @@
             </div>
         </div>
     </div>
-</html>

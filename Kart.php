@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/kart.css">
 	<title>Kart</title>

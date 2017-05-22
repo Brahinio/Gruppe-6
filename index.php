@@ -110,16 +110,17 @@
 
             <section class="infoboxes w3-row g6-center g6-margin g6-border-bottom">
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-2">Mat</h4>
-                    <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
+                    <a href="./mat.php"><h4 class="w3-card-2">Mat</h4></a>
+                    <p>De beste spisestedene- rangert etter din lommebok. Hvorfor ikke invitere en medstudent på en kopp kaffe?</p>
+                    
                 </div>
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-2">Aktiviteter</h4>
-                    <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
+                    <a href="./aktiviteter.php"><h4 class="w3-card-2">Aktiviteter</h4></a>
+                    <p>Hva skal man finne på? Volleyball i parken, minigolf eller et slag sjakk. Ta et lite avbrekk og gjør studietiden minnerik!</p>
                 </div>
                 <div class="w3-third g6-margin g6-content-padding">
-                    <h4 class="w3-card-2">Kart</h4>
-                    <p>Lorem ipsum dolor sit amet, duo ea mutat honestatis. Lorem ipsum dolor sit amet, duo ea mutat honestatis, at munere evertitur cum, duo eu vivendum euripidis.</p>
+                    <a href="./Kart.php"><h4 class="w3-card-2">Kart</h4></a>
+                    <p>Kartoversikt over alle steder- slik at du enkelt kan finne fram til de feteste tilbudene uten å gå deg fullstendig vill.</p>
                 </div>
             </section>
 

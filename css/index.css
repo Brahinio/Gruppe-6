@@ -91,3 +91,9 @@
 .juicer-feed.white li.feed-item.juicer, .juicer-feed.user li.feed-item.juicer, .juicer-feed.juicer-widget li.feed-item.juicer, .juicer-feed.colors li.feed-item.juicer, .juicer-feed.gray li.feed-item.juicer, .juicer-feed.modern li.feed-item.juicer, .juicer-feed.polaroid li.feed-item.juicer {
     display: none !important;
 }
+
+@media screen and (max-width: 900px) {
+    .image-slider {
+        margin-bottom: 5px !important;
+    }
+}

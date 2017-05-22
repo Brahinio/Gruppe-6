@@ -11,23 +11,23 @@
         <section class="image-slider w3-row g6-margin w3-content w3-padding">
             <div class="w3-display-container">
                 <div class="w3-display-container mySlides">
-                    <img src="img/img_fjords_wide.jpg" style="width:100%">
+                    <img src="Stedsbilder/bryggeriSchous2.JPG" style="width:100%">
                     <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-                       <h3>Trolltunga, Norway</h3>
+                       <h3>Bryggeri Schous</h3>
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
-                    <img src="img/img_mountains_wide.jpg" style="width:100%">
+                    <img src="Stedsbilder/Blå.JPG" style="width:100%">
                     <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Vakre lys, Norway</h3>
+                        <h3>Blå</h3>
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
-                    <img src="img/img_nature_wide.jpg" style="width:100%">
+                    <img src="Stedsbilder/Rema1000(v).JPG" style="width:100%">
                     <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Beautiful Mountains</h3>
+                        <h3>Rett ved Vulkan</h3>
                     </div>
                 </div>
 

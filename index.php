@@ -8,7 +8,7 @@
     
     <div class="w3-row g6-no-header-space">
 
-        <section class="image-slider w3-row g6-margin w3-content w3-padding">
+        <section class="image-slider w3-row w3-content w3-padding">
             <div class="w3-display-container">
                 <div class="w3-display-container mySlides">
                     <img src="Stedsbilder/bryggeriSchous2.JPG" style="width:100%">

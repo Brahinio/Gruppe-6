@@ -74,6 +74,16 @@
     margin-bottom: 20px !important;
 }
 
+.mySlides img {
+    width: 100%;
+}
+
+.slider-text {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
 .campus-lenker {
     margin-top: 10px;
     line-height: 1.8em;

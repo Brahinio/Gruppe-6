@@ -11,23 +11,23 @@
         <section class="image-slider w3-row w3-content w3-padding">
             <div class="w3-display-container">
                 <div class="w3-display-container mySlides">
-                    <img src="Stedsbilder/bryggeriSchous2.JPG" style="width:100%">
-                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-                       <h3>Bryggeri Schous</h3>
+                    <img src="Stedsbilder/slider_1_1.jpg">
+                    <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
+                       <h3>Schouskjelleren: mikrobryggeri</h3>
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
-                    <img src="Stedsbilder/Blå.JPG" style="width:100%">
-                    <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Blå</h3>
+                    <img src="Stedsbilder/slider_2_1.jpg">
+                    <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
+                        <h3>Blå: events lysten?</h3>
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
-                    <img src="Stedsbilder/Rema1000(v).JPG" style="width:100%">
-                    <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Rett ved Vulkan</h3>
+                    <img src="Stedsbilder/slider_3_1.jpg">
+                    <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
+                        <h3>Rett ved Vulkan: over vegen</h3>
                     </div>
                 </div>
 

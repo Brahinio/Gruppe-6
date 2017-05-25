@@ -25,21 +25,29 @@ else $page = 1;
 
 
 $articles = new Article();
-if (isset($categoryId) && ($categoryId == $aktiviteterId || $categoryId == $treningssenterId)) {
-    $articles = $articles->where('category_id', $categoryId);
-}
-else {
-    $articles = $articles->where('category_id', $aktiviteterId)->orWhere('category_id', $treningssenterId);
-}
-
-$maxPages = (count($articles->get()) % $maxPerPage == 0 ? (count($articles->get()) / $maxPerPage) : ((count($articles->get()) > $maxPerPage) ? (floor(count($articles->get()) / $maxPerPage)) + 1 : 1 ) );
-
-if (isset($price) && $price > 0 && $price <=3) {
+if (isset($price) && $price > 0 && $price <=4) {
     $articles = $articles->where('price', $price);
 }
 else {
     $articles = $articles->orderBy('price', 'asc');
 }
+
+if (isset($categoryId) && ($categoryId == $aktiviteterId || $categoryId == $treningssenterId)) {
+    $articles = $articles->where('category_id', $categoryId);
+}
+else {
+    if (isset($price) && $price > 0 && $price <=4) {
+        $articles = $articles->where('category_id', $aktiviteterId)->orWhere('category_id', $treningssenterId)->where('price', $price);
+    }
+    else {
+        $articles = $articles->where('category_id', $aktiviteterId)->orWhere('category_id', $treningssenterId);
+    }
+}
+
+
+
+$maxPages = (count($articles->get()) % $maxPerPage == 0 ? (count($articles->get()) / $maxPerPage) : ((count($articles->get()) > $maxPerPage) ? (floor(count($articles->get()) / $maxPerPage)) + 1 : 1 ) );
+
 // Get elements for your page, don't overextend, don't go to empty page
 if(count($articles->get()) > $maxPerPage * ($page-1)) $articles = $articles->skip($maxPerPage * ($page-1))->take($maxPerPage)->get();
 else if(count($articles->get()) % $maxPerPage != 0) $articles = $articles->skip(floor(count($articles->get()) / $maxPerPage) * $maxPerPage)->take($maxPerPage)->get();
@@ -80,11 +88,12 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
                             <option value="<?= $category->id ?>" <?= (isset($categoryId) && $categoryId == $category->id) ? 'selected' : '' ?>><?= $category->category_name ?></option>
                         <?php } ?>
                         
-                     </select>
+                    </select>
                         
-                     <select class="w3-right w3-margin-right" name="price" onchange="this.form.submit()">
+                    <select class="w3-right w3-margin-right" name="price" onchange="this.form.submit()">
                         
                         <option value="0">Alle priser</option>
+                        <option value="4" <?= (isset($price) && $price == 4) ? 'selected' : '' ?>>Gratis</option>
                         <?php for($i=1; $i <= 3; $i++) { ?>
                             <option value="<?= $i ?>" <?= (isset($price) && $price == $i) ? 'selected' : '' ?>>Pris: <?php for($n=0; $n < $i; $n++) { ?>$<?php } ?></option>
                         <?php } ?>
@@ -109,7 +118,7 @@ $categories = Category::where('id', $aktiviteterId)->orWhere('id', $treningssent
                         <p class="w3-margin-left"><?= $article->description ?></p>
                         
                         <br>
-                        <span class="w3-margin-left">Pris: <?php for($i=0; $i < $article->price; $i++) { ?><i class="fa fa-dollar"></i><?php } ?></span>
+                        <span class="w3-margin-left">Pris: <?php if($article->price > 0 && $article->price < 4) { for($i=0; $i < $article->price; $i++) { ?><i class="fa fa-dollar"></i><?php }} else echo 'Gratis' ?></span>
                         
                         <br><br>
                           

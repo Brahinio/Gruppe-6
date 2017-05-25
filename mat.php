@@ -1,15 +1,3 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Mat</title>
-
-<?php require_once 'header.php'; ?>
-
 <?php
 
 // Koble til databasen
@@ -37,20 +25,23 @@ else $page = 1;
 
 
 $articles = new Article();
-if (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId)) {
-    $articles = $articles->where('category_id', $categoryId);
-}
-else {
-    $articles = $articles->where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId);
-}
-
-$maxPages = (count($articles->get()) % $maxPerPage == 0 ? (count($articles->get()) / $maxPerPage) : ((count($articles->get()) > $maxPerPage) ? (floor(count($articles->get()) / $maxPerPage)) + 1 : 1 ) );
-
 if (isset($price) && $price > 0 && $price <=3) {
     $articles = $articles->where('price', $price);
 }
 else {
     $articles = $articles->orderBy('price', 'asc');
+}
+
+if (isset($categoryId) && ($categoryId == $matbutikkerId || $categoryId == $restauranterId)) {
+    $articles = $articles->where('category_id', $categoryId);
+}
+else {
+    if (isset($price) && $price > 0 && $price <=4) {
+        $articles = $articles->where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId)->where('price', $price);
+    }
+    else {
+        $articles = $articles->where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId);
+    }
 }
 // Get elements for your page, don't overextend, don't go to empty page
 if(count($articles->get()) > $maxPerPage * ($page-1)) $articles = $articles->skip($maxPerPage * ($page-1))->take($maxPerPage)->get();
@@ -63,6 +54,19 @@ else $articles = $articles->skip((floor(count($articles) / $maxPerPage) - 1) * $
 $categories = Category::where('id', $matbutikkerId)->orWhere('id', $restauranterId)->get()->take($maxPerPage);
 
 ?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Mat</title>
+
+<?php require_once 'header.php'; ?>
+
+
      
     <div class="w3-row">
         <div class="w3-content g6-padding">

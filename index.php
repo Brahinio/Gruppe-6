@@ -13,7 +13,7 @@
                 <div class="w3-display-container mySlides">
                     <img src="Stedsbilder/slider_1_1.jpg">
                     <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
-                       <h3>Schouskjelleren: mikrobryggeri</h3>
+                       <h3>Schouskjelleren Mikrobryggeri</h3>
                     </div>
                 </div>
 
@@ -27,7 +27,7 @@
                 <div class="w3-display-container mySlides">
                     <img src="Stedsbilder/slider_3_1.jpg">
                     <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Rett ved Vulkan: over vegen</h3>
+                        <h3>Ved Vulkan: rett over vegen</h3>
                     </div>
                 </div>
 

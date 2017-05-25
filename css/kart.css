@@ -7,20 +7,19 @@
     width: 16px;
     height: 16px;
     position: relative;
-    top: 6px;
-}
-
-.select-kategorier {
-
+    top: 3px;
 }
 
 .checkboxes {
-    margin: 0px 15px 0px 15px;
-    width: 15px;
+    margin: 0px 15px 10px 15px;
+}
+
+.checkboxes * {
+    margin-bottom: 15px !important;
 }
 
 .g6-check {
-    margin-top: 14.5px;
+    margin-right: 12px;
 }
 
 .g6-search-kart {

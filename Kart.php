@@ -18,7 +18,6 @@ $locations = Location::all();
 
     <div class="w3-row">
         <div class="w3-content g6-padding">
-            
             <div class="g6-center"><h1 class="g6-color-blue">Kart</h1>
                 <p class="ingress">Her får du en kartoversikt over anbefalte steder</p>
             </div>
@@ -26,19 +25,12 @@ $locations = Location::all();
             <div class="w3-quarter g6-bg">
                 <div class="sok-kategorier">
                     <div class="w3-col">
-                        <div class="checkboxes w3-left">
-                            <input class="g6-check" type="checkbox" name="store" onchange="checkboxToggle(this)">
-                            <input class="g6-check" type="checkbox" name="restaurant" onchange="checkboxToggle(this)">
-                            <input class="g6-check" type="checkbox" name="activity" onchange="checkboxToggle(this)">
-                            <input class="g6-check" type="checkbox" name="training" onchange="checkboxToggle(this)">
-                            <input class="g6-check" type="checkbox" name="school" onchange="checkboxToggle(this)" checked>
-                        </div>
-                        <div class="label-kategorier">
-                            <p>Matbutikker</p>
-                            <p>Restauranter</p>
-                            <p>Aktiviteter</p>
-                            <p>Treningssenter</p>
-                            <p>Skoler</p>
+                        <div class="checkboxes">
+                            <label class="w3-row"><input type="checkbox" class="g6-check" name="store" onchange="checkboxToggle(this)">Matbutikker</label>
+                            <label class="w3-row"><input type="checkbox" class="g6-check" name="restaurant" onchange="checkboxToggle(this)">Restauranter</label>
+                            <label class="w3-row"><input type="checkbox" class="g6-check" name="activity" onchange="checkboxToggle(this)">Aktiviteter</label>
+                            <label class="w3-row"><input type="checkbox" class="g6-check" name="training" onchange="checkboxToggle(this)">Treningssenter</label>
+                            <label class="w3-row"><input type="checkbox" class="g6-check" name="school" onchange="checkboxToggle(this)" checked>Skoler</label>
                         </div>
                     </div>
                     <button class="g6-search-kart g6-light-green" onclick="recenterMap()">Sentrer kart</button>

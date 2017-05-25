@@ -12,23 +12,29 @@
             <div class="w3-display-container">
                 <div class="w3-display-container mySlides">
                     <img src="Stedsbilder/slider_1_1.jpg">
-                    <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
-                       <h3>Schouskjelleren Mikrobryggeri</h3>
-                    </div>
+                    <a href="./mat.php" alt="Schouskjelleren Mikrobryggeri">
+                        <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
+                           <h3>Schouskjelleren Mikrobryggeri</h3>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="Stedsbilder/slider_2_1.jpg">
-                    <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Blå: events lysten?</h3>
-                    </div>
+                    <a href="./mat.php" alt="Blå">
+                        <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
+                            <h3>Blå: events lysten?</h3>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="Stedsbilder/slider_3_1.jpg">
-                    <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
-                        <h3>Ved Vulkan: rett over vegen</h3>
-                    </div>
+                    <a href="./mat.php" alt="Vulkan">
+                        <div class="slider-text w3-large w3-container w3-padding-16 w3-black">
+                            <h3>Ved Vulkan: rett over vegen</h3>
+                        </div>
+                    </a>
                 </div>
 
                 <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>

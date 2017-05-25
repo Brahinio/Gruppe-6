@@ -25,6 +25,7 @@ $locations = Location::all();
             <div class="w3-quarter g6-bg">
                 <div class="sok-kategorier">
                     <div class="w3-col">
+                        <p class="label-check">Vis kategori</p>
                         <div class="checkboxes">
                             <label class="w3-row"><input type="checkbox" class="g6-check" name="store" onchange="checkboxToggle(this)">Matbutikker</label>
                             <label class="w3-row"><input type="checkbox" class="g6-check" name="restaurant" onchange="checkboxToggle(this)">Restauranter</label>

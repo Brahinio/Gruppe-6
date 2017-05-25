@@ -1,6 +1,10 @@
 .sok-kategorier {
-    margin: 15px;
+    margin: 25px;
     width: 100%;
+}
+
+.label-check {
+    margin-top: 0px !important;
 }
 
 .g6-check, .g6-radio {

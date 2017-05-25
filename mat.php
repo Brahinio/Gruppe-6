@@ -43,6 +43,9 @@ else {
         $articles = $articles->where('category_id', $matbutikkerId)->orWhere('category_id', $restauranterId);
     }
 }
+
+$maxPages = (count($articles->get()) % $maxPerPage == 0 ? (count($articles->get()) / $maxPerPage) : ((count($articles->get()) > $maxPerPage) ? (floor(count($articles->get()) / $maxPerPage)) + 1 : 1 ) );
+
 // Get elements for your page, don't overextend, don't go to empty page
 if(count($articles->get()) > $maxPerPage * ($page-1)) $articles = $articles->skip($maxPerPage * ($page-1))->take($maxPerPage)->get();
 else if(count($articles->get()) % $maxPerPage != 0) $articles = $articles->skip(floor(count($articles->get()) / $maxPerPage) * $maxPerPage)->take($maxPerPage)->get();

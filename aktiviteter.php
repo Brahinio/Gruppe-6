@@ -44,8 +44,6 @@ else {
     }
 }
 
-
-
 $maxPages = (count($articles->get()) % $maxPerPage == 0 ? (count($articles->get()) / $maxPerPage) : ((count($articles->get()) > $maxPerPage) ? (floor(count($articles->get()) / $maxPerPage)) + 1 : 1 ) );
 
 // Get elements for your page, don't overextend, don't go to empty page

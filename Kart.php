@@ -38,6 +38,7 @@ $locations = Location::all();
                 </div>
             </div>
             
+            
             <div class="w3-threequarter">
                 <div id="googleMap"></div>
             </div>
@@ -47,6 +48,7 @@ $locations = Location::all();
                 
                 const iconBasePath = "http://maps.google.com/mapfiles/kml/";
                 var markers = [];
+                var infoWindows = [];
                 var icons;
                 var map;
                 var mapProp;
@@ -83,7 +85,17 @@ $locations = Location::all();
                                         case 6:
                                             echo 'school2';
                                             break;
-                                    }?>});
+                                    }?>,
+                                map: map});
+                    
+                            <?php $article = Article::where('location_id', $location->id)->first(); if(count($article) > 0 && $article != null) { ?>
+                                infoWindow<?= $location->id ?> = new google.maps.InfoWindow({content: "<a href=\"./<?= $location->category_id == 2 ? 'mat.php?category=2' : ($location->category_id == 3 ? 'mat.php?category=3' : ($location->category_id == 4 ? 'aktiviteter.php?category=4' : 'aktiviteter.php?category=5' )) ?>\" style=\"color:blue\"><?= $article->title ?></a>"});
+                                marker.addListener('click', function() { 
+                                    closeAllInfoWindows();
+                                    infoWindow<?= $location->id ?>.open(map, this);
+                                });
+                                infoWindows.push(infoWindow<?= $location->id ?>);
+                            <?php } ?>
                             markers.push(marker);
                         <?php } ?>
                     <?php } ?>
@@ -113,6 +125,12 @@ $locations = Location::all();
                         if(marker.icon.url == icon.url) marker.setMap(value);
                     });
                     
+                }
+                
+                function closeAllInfoWindows() {
+                    infoWindows.forEach(function(infoWindow) {
+                        infoWindow.close();
+                    });
                 }
                 
                 function recenterMap() {

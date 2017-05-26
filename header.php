@@ -3,6 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Webprosjekt" content="">
     <meta name="Gruppe 6" content="">
+
+    <html lang=”nb”>
     
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/w3.css">
